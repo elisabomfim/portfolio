@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Editorial & Arquitetura de Aprendizagem</title>
+    
+    <!-- Tipografia Modern Vintage -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --vintage-cream: #F8F4ED;
+            --vintage-linen: #EFE8DC;
+            --vintage-paper: #FFFFFF;
+            --terracotta-raw: #9E4732;
+            --terracotta-accent: #B8583F;
+            --espresso-dark: #221812;
+            --espresso-soft: #382A21;
+            --leather-amber: #C68642;
+            --border-ink: rgba(34, 24, 18, 0.12);
+            --border-strong: rgba(158, 71, 50, 0.25);
+            
+            --font-title: 'Playfair Display', Georgia, serif;
+            --font-accent: 'Instrument Serif', Georgia, serif;
+            --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            
+            --shadow-paper: 0 4px 20px rgba(34, 24, 18, 0.05);
+            --shadow-hover: 0 12px 32px rgba(158, 71, 50, 0.12);
+            --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--vintage-cream);
+            color: var(--espresso-dark);
+            font-family: var(--font-body);
+            line-height: 1.7;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            background-image: radial-gradient(var(--border-ink) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header Editorial */
+        header {
+            padding: 2.2rem 0 1.5rem 0;
+            border-bottom: 2px solid var(--espresso-dark);
+            background-color: rgba(248, 244, 237, 0.96);
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-monogram {
+            font-family: var(--font-title);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--espresso-dark);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .brand-monogram span {
+            color: var(--terracotta-raw);
+            font-style: italic;
+            font-family: var(--font-accent);
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--espresso-soft);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--terracotta-raw);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 5.5rem 0 4rem 0;
+            display: grid;
+            grid-template-columns: 1.4fr 0.9fr;
+            gap: 3.5rem;
+            align-items: center;
+            border-bottom: 1px solid var(--border-ink);
+        }
+
+        .hero-stamp {
+            display: inline-block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--terracotta-raw);
+            font-weight: 700;
+            padding: 0.35rem 0.8rem;
+            border: 1px solid var(--terracotta-raw);
+            border-radius: 2px;
+            margin-bottom: 1.8rem;
+        }
+
+        .hero h1 {
+            font-family: var(--font-title);
+            font-size: 2.85rem;
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            color: var(--espresso-dark);
+        }
+
+        .hero h1 em {
+            font-family: var(--font-accent);
+            font-size: 3.4rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--terracotta-raw);
+        }
+
+        .hero-prose {
+            font-size: 1.08rem;
+            color: var(--espresso-soft);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-curiosities {
+            background: var(--vintage-linen);
+            border-left: 3px solid var(--terracotta-raw);
+            padding: 2.2rem;
+            border-radius: 0 4px 4px 0;
+            box-shadow: var(--shadow-paper);
+        }
+
+        .hero-curiosities h3 {
+            font-family: var(--font-title);
+            font-size: 1.18rem;
+            margin-bottom: 0.8rem;
+            color: var(--espresso-dark);
+        }
+
+        .hero-curiosities p {
+            font-size: 0.92rem;
+            color: var(--espresso-soft);
+            line-height: 1.7;
+        }
+
+        /* Container de Inovação & Tecnologia */
+        .innovation-banner {
+            padding: 4.5rem 0;
+            background: var(--vintage-paper);
+            border-bottom: 1px solid var(--border-ink);
+        }
+
+        .innovation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .innovation-text h3 {
+            font-family: var(--font-title);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--espresso-dark);
+        }
+
+        .innovation-text p {
+            font-size: 1rem;
+            color: var(--espresso-soft);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .innovation-quote {
+            background: var(--vintage-cream);
+            border: 1px dashed var(--border-strong);
+            padding: 2.2rem;
+            border-radius: 2px;
+            font-style: italic;
+            font-family: var(--font-title);
+            font-size: 1.15rem;
+            color: var(--terracotta-raw);
+            line-height: 1.6;
+        }
+
+        /* Container de Alinhamento de Escopo */
+        .scope-alignment {
+            padding: 4.5rem 0;
+            border-bottom: 1px solid var(--border-ink);
+        }
+
+        .scope-card {
+            background: var(--vintage-linen);
+            border: 1px solid var(--border-ink);
+            border-left: 4px solid var(--leather-amber);
+            padding: 2.5rem;
+            border-radius: 2px;
+        }
+
+        .scope-card h3 {
+            font-family: var(--font-title);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--espresso-dark);
+        }
+
+        .scope-card p {
+            font-size: 0.98rem;
+            color: var(--espresso-soft);
+            line-height: 1.8;
+        }
+
+        /* Seção Editorial do LinkedIn */
+        .editorial-section {
+            padding: 5.5rem 0;
+            background-color: var(--vintage-linen);
+            border-bottom: 1px solid var(--border-ink);
+        }
+
+        .editorial-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--leather-amber);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .section-heading {
+            font-family: var(--font-title);
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+            color: var(--espresso-dark);
+        }
+
+        .section-lead {
+            font-size: 1.05rem;
+            color: var(--espresso-soft);
+            max-width: 800px;
+        }
+
+        .slider-controls {
+            display: flex;
+            gap: 0.8rem;
+        }
+
+        .ctrl-btn {
+            background: var(--vintage-paper);
+            border: 1px solid var(--border-ink);
+            width: 46px;
+            height: 46px;
+            border-radius: 2px;
+            cursor: pointer;
+            font-family: var(--font-title);
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--espresso-dark);
+            transition: var(--transition);
+        }
+
+        .ctrl-btn:hover {
+            background: var(--terracotta-raw);
+            color: white;
+            border-color: var(--terracotta-raw);
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 1.8rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            padding: 1rem 0 2.5rem 0;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .carousel-track::-webkit-scrollbar {
+            height: 7px;
+        }
+
+        .carousel-track::-webkit-scrollbar-thumb {
+            background: var(--terracotta-raw);
+            border-radius: 3px;
+        }
+
+        .essay-card {
+            flex: 0 0 380px;
+            scroll-snap-align: start;
+            background: var(--vintage-paper);
+            padding: 2.4rem 2rem;
+            border: 1px solid var(--border-ink);
+            border-radius: 2px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: var(--shadow-paper);
+            transition: var(--transition);
+        }
+
+        .essay-card:hover {
+            border-color: var(--terracotta-raw);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .essay-badge {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--terracotta-raw);
+            font-weight: 700;
+            margin-bottom: 0.9rem;
+        }
+
+        .essay-card h4 {
+            font-family: var(--font-title);
+            font-size: 1.25rem;
+            line-height: 1.4;
+            margin-bottom: 1rem;
+            color: var(--espresso-dark);
+        }
+
+        .essay-card p {
+            font-size: 0.9rem;
+            color: var(--espresso-soft);
+            line-height: 1.7;
+            margin-bottom: 1.8rem;
+        }
+
+        .essay-footer {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--terracotta-raw);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            border-top: 1px solid var(--border-ink);
+            padding-top: 1rem;
+        }
+
+        /* Matriz de Produções & Casos */
+        .portfolio-section {
+            padding: 6rem 0;
+            border-bottom: 1px solid var(--border-ink);
+        }
+
+        .filter-shelf {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 3.5rem;
+            border-bottom: 1px solid var(--border-ink);
+            padding-bottom: 1.5rem;
+        }
+
+        .filter-chip {
+            background: transparent;
+            border: 1px solid var(--border-ink);
+            padding: 0.5rem 1.2rem;
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--espresso-soft);
+            cursor: pointer;
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .filter-chip:hover, .filter-chip.active {
+            background: var(--espresso-dark);
+            color: var(--vintage-cream);
+            border-color: var(--espresso-dark);
+        }
+
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .case-card {
+            background: var(--vintage-paper);
+            border: 1px solid var(--border-ink);
+            padding: 2.4rem 2rem;
+            border-radius: 2px;
+            box-shadow: var(--shadow-paper);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition);
+        }
+
+        .case-card:hover {
+            box-shadow: var(--shadow-hover);
+            border-color: var(--border-strong);
+            transform: translateY(-2px);
+        }
+
+        .case-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .meta-tag {
+            color: var(--terracotta-raw);
+            font-weight: 700;
+        }
+
+        .meta-level {
+            color: var(--leather-amber);
+            font-weight: 600;
+        }
+
+        .case-card h3 {
+            font-family: var(--font-title);
+            font-size: 1.35rem;
+            line-height: 1.3;
+            margin-bottom: 0.5rem;
+            color: var(--espresso-dark);
+        }
+
+        .case-subtitle {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--espresso-soft);
+            margin-bottom: 1.2rem;
+        }
+
+        .narrative-block {
+            font-size: 0.92rem;
+            color: var(--espresso-soft);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .narrative-block strong {
+            color: var(--espresso-dark);
+        }
+
+        .case-punchline {
+            border-top: 1px solid var(--border-ink);
+            padding-top: 1rem;
+            font-size: 0.85rem;
+            color: var(--terracotta-raw);
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        /* Pilares de Competências */
+        .pillars-section {
+            padding: 5.5rem 0;
+            border-bottom: 1px solid var(--border-ink);
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pillar-card {
+            background: var(--vintage-paper);
+            border: 1px solid var(--border-ink);
+            padding: 2.5rem 2rem;
+            border-radius: 2px;
+            box-shadow: var(--shadow-paper);
+            transition: var(--transition);
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--terracotta-raw);
+        }
+
+        .pillar-card h3 {
+            font-family: var(--font-title);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--espresso-dark);
+        }
+
+        .pillar-card p {
+            font-size: 0.92rem;
+            color: var(--espresso-soft);
+            line-height: 1.7;
+        }
+
+        /* Footer Modern Vintage */
+        footer {
+            background-color: var(--espresso-dark);
+            color: var(--vintage-cream);
+            padding: 5.5rem 0 4rem 0;
+            border-top: 4px solid var(--terracotta-raw);
+        }
+
+        .footer-dialogue {
+            max-width: 820px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-dialogue h2 {
+            font-family: var(--font-title);
+            font-size: 2.3rem;
+            margin-bottom: 1.2rem;
+            color: var(--vintage-cream);
+        }
+
+        .footer-dialogue p {
+            font-size: 1.05rem;
+            color: var(--vintage-linen);
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 0.9rem 1.6rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .cta-primary {
+            background: var(--terracotta-raw);
+            color: white;
+        }
+
+        .cta-primary:hover {
+            background: var(--terracotta-accent);
+            transform: translateY(-2px);
+        }
+
+        .cta-secondary {
+            border: 1px solid var(--vintage-linen);
+            color: var(--vintage-cream);
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: white;
+        }
+
+        .academic-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .academic-links a {
+            color: var(--leather-amber);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+        }
+
+        .academic-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-ps {
+            font-size: 0.8rem;
+            color: rgba(248, 244, 237, 0.5);
+            font-style: italic;
+        }
+
+        @media (max-width: 860px) {
+            .hero { grid-template-columns: 1fr; padding: 4rem 0 3rem 0; }
+            .hero h1 { font-size: 2.3rem; }
+            .innovation-grid { grid-template-columns: 1fr; }
+            .editorial-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+            .nav-links { display: none; }
+            .cases-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Topbar Editorial -->
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="brand-monogram">
+                Arquitetura de Aprendizagem <span>& Informação</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#editorial">Editorial LinkedIn</a></li>
+                <li><a href="#portfolio">Matriz de Projetos</a></li>
+                <li><a href="#competencias">Governança & Estratégia</a></li>
+                <li><a href="#contato">Contato Estratégico</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="container hero">
+        <div>
+            <span class="hero-stamp">Editorial & Arquitetura Instrucional</span>
+            <h1>A engenharia do conhecimento traduzida em <em>jornadas sem fricção.</em></h1>
+            <p class="hero-prose">
+                Cientista da Informação por formação, Designer Instrucional por estratégia e pesquisadora em Banco de Dados por pura afinidade com a lógica das estruturas. Minha atuação consiste em organizar domínios densos — de Inteligência Artificial a protocolos clínicos — em percursos claros, funcionais e cognitivamente assimiláveis.
+            </p>
+            <p class="hero-prose">
+                Trabalho na estruturação de fluxos informacionais, na governança de processos de produção em escala e no desenho de experiências digitais onde o conteúdo é facilmente localizado, compreendido e aplicado.
+            </p>
+        </div>
+        <div class="hero-curiosities">
+            <h3>Quando os dados encontram a intencionalidade</h3>
+            <p>
+                A estruturação educacional vai além do acabamento visual de um material. Ela envolve estabelecer critérios taxonômicos, organizar hierarquias de navegação em poucos passos e garantir que o conhecimento técnico seja retido com clareza mesmo sob rotinas corporativas de alta demanda.
+            </p>
+        </div>
+    </section>
+
+    <!-- Container: Inovação Tecnológica & Pesquisa -->
+    <section class="innovation-banner">
+        <div class="container innovation-grid">
+            <div class="innovation-text">
+                <span class="section-tag">Pesquisa Aplicada & Vanguarda</span>
+                <h3>Atração por Inovação e Domínio Tecnológico</h3>
+                <p>
+                    Como pesquisadora de novas tecnologias, mantenho um olhar atento para ferramentas emergentes, automações e modelos de Inteligência Artificial. No entanto, a tecnologia nunca é o ponto de partida isolado: ela opera como alavanca funcional para otimizar processos, acelerar fluxos de produção e qualificar o acesso à informação.
+                </p>
+                <p>
+                    Minha prática une a curiosidade investigativa sobre inovações digitais à capacidade de selecionar, calibrar e implementar recursos tecnológicos com consistência técnica e responsabilidade pedagógica.
+                </p>
+            </div>
+            <div class="innovation-quote">
+                "Não se trata de adotar novidades pelo apelo do formato, mas de gerenciar a inovação para que a tecnologia de ponta sirva diretamente à clareza, à retenção do raciocínio e à autonomia de quem aprende."
+            </div>
+        </div>
+    </section>
+
+    <!-- Container: Alinhamento de Escopo e Atuação -->
+    <section class="container scope-alignment">
+        <div class="scope-card">
+            <h3>Alinhamento de Escopo e Valor Profissional</h3>
+            <p>
+                Minha formação multidisciplinar foi construída para atuar na concepção arquitetural, na governança de dados, na modelagem de sistemas de aprendizagem e na gestão estratégica do conhecimento. Atividades puramente operacionais de formatação e diagramação mecânica de slides subutilizam essa bagagem analítica. Minha contribuição reside na engenharia do percurso, na resolução de gargalos conceituais e na estruturação de soluções sustentáveis em escala.
+            </p>
+        </div>
+    </section>
+
+    <!-- Seção Editorial: Publicações do LinkedIn -->
+    <section class="editorial-section" id="editorial">
+        <div class="container">
+            <div class="editorial-header">
+                <div>
+                    <span class="section-tag">Thought Leadership</span>
+                    <h2 class="section-heading">Editorial Crítico & Ensaios Públicos</h2>
+                    <p class="section-lead">Reflexões publicadas sobre governança de dados, tomada de decisão, arquitetura de sistemas e os bastidores do design instrucional.</p>
+                </div>
+                <div class="slider-controls">
+                    <button class="ctrl-btn" onclick="scrollEditorial(-1)" title="Anterior">&larr;</button>
+                    <button class="ctrl-btn" onclick="scrollEditorial(1)" title="Próximo">&rarr;</button>
+                </div>
+            </div>
+
+            <div class="carousel-track" id="editorialSlider">
+                
+                <!-- 1. O custo do dado sem contexto -->
+                <article class="essay-card">
+                    <div>
+                        <span class="essay-badge">Governança de Dados</span>
+                        <h4>O custo do dado sem contexto</h4>
+                        <p>A coleta massiva de eventos em sistemas digitais só gera inteligência quando articulada a uma leitura interpretativa orientada por perguntas estratégicas claras.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:share:7495167903521214464" target="_blank" class="essay-footer">Ler publicação no LinkedIn &rarr;</a>
+                </article>
+
+                <!-- 2. O vazamento invisível -->
+                <article class="essay-card">
+                    <div>
+                        <span class="essay-badge">Gestão do Conhecimento</span>
+                        <h4>O vazamento invisível: quanto da sua inteligência educacional se esvai?</h4>
+                        <p>Uma análise sobre a separação silenciosa entre operações que apenas acumulam materiais e organizações que retêm o rastro lógico das decisões tomadas.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:share:7490482959615987713" target="_blank" class="essay-footer">Ler publicação no LinkedIn &rarr;</a>
+                </article>
+
+                <!-- 3. Evento, evidência e o preço da precisão -->
+                <article class="essay-card">
+                    <div>
+                        <span class="essay-badge">Analytics & Avaliação</span>
+                        <h4>Evento, evidência e o preço da precisão</h4>
+                        <p>A diferença entre registrar o comportamento mecânico no sistema e interpretar o que a experiência realmente significou em termos de compreensão e domínio.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:share:7488051828727869440" target="_blank" class="essay-footer">Ler publicação no LinkedIn &rarr;</a>
+                </article>
+
+                <!-- 4. Margem, fronteira e o preço do consenso -->
+                <article class="essay-card">
+                    <div>
+                        <span class="essay-badge">Posicionamento</span>
+                        <h4>Margem, fronteira e o preço do consenso</h4>
+                        <p>Permanecer fora do consenso imediato para produzir aquilo que o ecossistema só reconhecerá como necessário após o amadurecimento do ciclo.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:share:7477783518798999552" target="_blank" class="essay-footer">Ler publicação no LinkedIn &rarr;</a>
+                </article>
+
+                <!-- 5. A IA não esconde quem você é -->
+                <article class="essay-card">
+                    <div>
+                        <span class="essay-badge">Inteligência Artificial</span>
+                        <h4>A IA não esconde quem você é. Ela expõe.</h4>
+                        <p>A precisão das ferramentas generativas depende diretamente da clareza e da robustez do modelo mental de quem formula o problema e conduz a interlocução.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:share:7477432469739327488" target="_blank" class="essay-footer">Ler publicação no LinkedIn &rarr;</a>
+                </article>
+
+                <!-- 6. O ecossistema da inteligência -->
+                <article class="essay-card">
+                    <div>
+                        <span class="essay-badge">Cultura Organizacional</span>
+                        <h4>O ecossistema da inteligência: entregas qualificadas não vêm por osmose</h4>
+                        <p>A sofisticação de uma solução exige circulação entre áreas, exposição ao contraditório e tempo de maturação para além da mecânica das horas.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:share:7473826681330511872" target="_blank" class="essay-footer">Ler publicação no LinkedIn &rarr;</a>
+                </article>
+
+                <!-- 7. A diferença que não aparece no currículo -->
+                <article class="essay-card">
+                    <div>
+                        <span class="essay-badge">Repertório Profissional</span>
+                        <h4>A diferença que não aparece no currículo…</h4>
+                        <p>Enquanto a competência viabiliza a execução da tarefa, o repertório atua na percepção de padrões, nuances de contexto e desdobramentos de longo prazo.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:share:7472757300257148928" target="_blank" class="essay-footer">Ler publicação no LinkedIn &rarr;</a>
+                </article>
+
+                <!-- 8. O DI Estratégico por trás do Briefing -->
+                <article class="essay-card">
+                    <div>
+                        <span class="essay-badge">Design Instrucional</span>
+                        <h4>O DI Estratégico por trás do Briefing: A ilusão da linha divisória</h4>
+                        <p>A dimensão estratégica incide diretamente nas microdecisões operacionais de layout, organização de percursos e definição de critérios de mensuração.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:share:7464781346738163713" target="_blank" class="essay-footer">Ler publicação no LinkedIn &rarr;</a>
+                </article>
+
+                <!-- 9. Os profissionais de aprendizagem cederam à superficialidade? -->
+                <article class="essay-card">
+                    <div>
+                        <span class="essay-badge">Educação Corporativa</span>
+                        <h4>Os profissionais de aprendizagem cederam à superficialidade?</h4>
+                        <p>Uma provocação sobre o equilíbrio entre a promoção de práticas profissionais na rede e a real densidade reflexiva das entregas educacionais.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:share:7464038755360915456" target="_blank" class="essay-footer">Ler publicação no LinkedIn &rarr;</a>
+                </article>
+
+                <!-- 10. A armadilha do pertencimento -->
+                <article class="essay-card">
+                    <div>
+                        <span class="essay-badge">Reflexão</span>
+                        <h4>A armadilha do pertencimento: expandindo ou cabendo?</h4>
+                        <p>Considerações sobre a preservação da identidade profissional frente às pressões por conformidade em ecossistemas de trabalho tradicionais.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:share:7463647257712599040" target="_blank" class="essay-footer">Ler publicação no LinkedIn &rarr;</a>
+                </article>
+
+                <!-- 11. O que exatamente estamos chamando de engajamento? -->
+                <article class="essay-card">
+                    <div>
+                        <span class="essay-badge">Learning Analytics</span>
+                        <h4>O que exatamente estamos chamando de engajamento?</h4>
+                        <p>A separação fundamental entre a performance de engajamento (sinais imediatos de interação) e o envolvimento silencioso que constrói compreensão duradoura.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:share:7462355898007564288" target="_blank" class="essay-footer">Ler publicação no LinkedIn &rarr;</a>
+                </article>
+
+                <!-- 12. Por trás da obsessão e da caça aos textos mediados por IA -->
+                <article class="essay-card">
+                    <div>
+                        <span class="essay-badge">Autoria & Crítica</span>
+                        <h4>Por trás da obsessão e da caça aos textos mediados por IA</h4>
+                        <p>O debate sobre a legitimidade da autoria, critérios de profundidade de pensamento e a padronização das críticas estéticas nas redes.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:share:7459744035818295296" target="_blank" class="essay-footer">Ler publicação no LinkedIn &rarr;</a>
+                </article>
+
+                <!-- 13. Existe diferença entre Referência e Reprodução? -->
+                <article class="essay-card">
+                    <div>
+                        <span class="essay-badge">Metodologia</span>
+                        <h4>Existe diferença entre Referência e Reprodução?</h4>
+                        <p>Estudar uma referência deve propor deslocamento e ampliação de repertório, e não a mera repetição mecânica de modelos pré-formatados.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:share:7458622774815744000" target="_blank" class="essay-footer">Ler publicação no LinkedIn &rarr;</a>
+                </article>
+
+                <!-- 14. Tem uma coisa em L&D que acho curiosa! -->
+                <article class="essay-card">
+                    <div>
+                        <span class="essay-badge">Ciclo de Vida de Projetos</span>
+                        <h4>Tem uma coisa em L&D que acho curiosa!</h4>
+                        <p>Por que a energia investida antes da entrega do curso frequentemente desaparece depois que a solução entra em operação e começa a gerar dados reais.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:share:7457906452263948289" target="_blank" class="essay-footer">Ler publicação no LinkedIn &rarr;</a>
+                </article>
+
+                <!-- 15. Expectativa sobre funções -->
+                <article class="essay-card">
+                    <div>
+                        <span class="essay-badge">Estrutura Organizacional</span>
+                        <h4>Expectativa sobre funções e o tipo de responsabilidade que recai sobre elas…</h4>
+                        <p>Análise sobre como o desenho de processos e os limites funcionais impactam a qualidade e a sustentabilidade das operações educacionais.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7457470013311201280" target="_blank" class="essay-footer">Ler publicação no LinkedIn &rarr;</a>
+                </article>
+
+                <!-- 16. Fazemos ou não networking? -->
+                <article class="essay-card">
+                    <div>
+                        <span class="essay-badge">Comunicação Digital</span>
+                        <h4>Fazemos ou não networking?</h4>
+                        <p>A diferença entre acumular conexões de validação instantânea e cultivar conversas consistentes capazes de deslocar ideias e sustentar trocas.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:share:7456187183213809664" target="_blank" class="essay-footer">Ler publicação no LinkedIn &rarr;</a>
+                </article>
+
+                <!-- 17. A interação com IA tem revelado algo curioso -->
+                <article class="essay-card">
+                    <div>
+                        <span class="essay-badge">Mediação Tecnológica</span>
+                        <h4>A interação com IA tem revelado algo curioso</h4>
+                        <p>Sustentar uma interlocução construtiva com a inteligência artificial exige diálogo refinado e elaboração conceitual contínua.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:share:7455633824429830145" target="_blank" class="essay-footer">Ler publicação no LinkedIn &rarr;</a>
+                </article>
+
+                <!-- 18. Quando a referência substitui o diagnóstico… -->
+                <article class="essay-card">
+                    <div>
+                        <span class="essay-badge">Arquitetura de Projetos</span>
+                        <h4>Quando a referência substitui o diagnóstico…</h4>
+                        <p>Os riscos operacionais de iniciar a tomada de decisão a partir de uma solução pré-moldada em vez da leitura aprofundada do cenário real.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:share:7455321218762780672" target="_blank" class="essay-footer">Ler publicação no LinkedIn &rarr;</a>
+                </article>
+
+                <!-- 19. A sustentação da decisão como parte do trabalho em DI -->
+                <article class="essay-card">
+                    <div>
+                        <span class="essay-badge">Design Instrucional</span>
+                        <h4>A sustentação da decisão como parte do trabalho em Design Instrucional</h4>
+                        <p>Como a articulação entre intenção pedagógica e estrutura informacional fundamenta escolhas técnicas e garante a solidez de um percurso.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7453612352119267330" target="_blank" class="essay-footer">Ler publicação no LinkedIn &rarr;</a>
+                </article>
+
+                <!-- 20. O DI não atua só onde dizem! -->
+                <article class="essay-card">
+                    <div>
+                        <span class="essay-badge">Design de Sistemas</span>
+                        <h4>O DI não atua só onde dizem!</h4>
+                        <p>O impacto do design instrucional expande-se para a reorganização de fluxos, critérios e sustentação de processos ao redor da entrega.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:share:7453492475177947136" target="_blank" class="essay-footer">Ler publicação no LinkedIn &rarr;</a>
+                </article>
+
+                <!-- 21. Antes de começar, algo já está acontecendo… -->
+                <article class="essay-card">
+                    <div>
+                        <span class="essay-badge">Gestão de Projetos</span>
+                        <h4>Antes de começar, algo já está acontecendo…</h4>
+                        <p>O esforço prévio necessário para sustentar o problema e dar consistência conceitual a demandas que chegam com formatos e prazos difusos.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:share:7450634592660647937" target="_blank" class="essay-footer">Ler publicação no LinkedIn &rarr;</a>
+                </article>
+
+                <!-- 22. Quem trabalha nos bastidores tem vez? -->
+                <article class="essay-card">
+                    <div>
+                        <span class="essay-badge">Estrutura da Informação</span>
+                        <h4>Quem trabalha nos bastidores tem vez?</h4>
+                        <p>A importância do trabalho estrutural que organiza caminhos, evita ruídos e permite que todo o ecossistema funcione com fluidez.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:share:7446410118252134400" target="_blank" class="essay-footer">Ler publicação no LinkedIn &rarr;</a>
+                </article>
+
+                <!-- 23. Portfólio em Design Instrucional quase sempre mostra a coisa errada -->
+                <article class="essay-card">
+                    <div>
+                        <span class="essay-badge">Critério e Decisão</span>
+                        <h4>Portfólio em Design Instrucional quase sempre mostra a coisa errada</h4>
+                        <p>A relevância de evidenciar o raciocínio, os critérios de corte e a lógica de sustentação de um projeto para além de telas e acabamentos visuais.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:share:7445957839057190912" target="_blank" class="essay-footer">Ler publicação no LinkedIn &rarr;</a>
+                </article>
+
+                <!-- 24. O que diferencia um bom Designer Instrucional? -->
+                <article class="essay-card">
+                    <div>
+                        <span class="essay-badge">Arquitetura da Informação</span>
+                        <h4>O que diferencia um bom Designer Instrucional?</h4>
+                        <p>Competências fundamentais como leitura precisa do conteúdo, hierarquização rigorosa e critério decisório sobre o que permanece em cada etapa.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:share:7439838403514417152" target="_blank" class="essay-footer">Ler publicação no LinkedIn &rarr;</a>
+                </article>
+
+                <!-- 25. Entre páginas e fone de ouvido… -->
+                <article class="essay-card">
+                    <div>
+                        <span class="essay-badge">Mídia e Leitura</span>
+                        <h4>Entre páginas e fone de ouvido…</h4>
+                        <p>Reflexões sobre a evolução dos formatos de áudio, a ancestralidade da escuta de textos e as novas mediações tecnológicas no cotidiano.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:share:7438638267492642816" target="_blank" class="essay-footer">Ler publicação no LinkedIn &rarr;</a>
+                </article>
+
+                <!-- 26. Transposição didática: entre o DI e a Ciência da Informação -->
+                <article class="essay-card">
+                    <div>
+                        <span class="essay-badge">Ciência da Informação</span>
+                        <h4>Transposição didática: entre o Design Instrucional e a Ciência da Informação</h4>
+                        <p>Como a organização da informação qualifica a transposição didática ao traduzir densidade técnica em estruturas compreensíveis e recuperáveis.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:share:7438405468164730881" target="_blank" class="essay-footer">Ler publicação no LinkedIn &rarr;</a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Matriz Taxonômica de Projetos & Entregas -->
+    <section class="container portfolio-section" id="portfolio">
+        <div>
+            <span class="section-tag">Matriz Taxonômica</span>
+            <h2 class="section-heading">Ecossistemas, Metodologias e Soluções Entregues</h2>
+            <p class="section-lead">Projetos organizados por domínio, complexidade arquitetural e impacto nos processos de aprendizagem e negócios.</p>
+        </div>
+
+        <!-- Filtros Taxonômicos -->
+        <div class="filter-shelf">
+            <button class="filter-chip active" onclick="applyFilter('all')">Todos os Projetos</button>
+            <button class="filter-chip" onclick="applyFilter('health')">Educação Médica & Saúde</button>
+            <button class="filter-chip" onclick="applyFilter('exec')">Alta Liderança & Executivos</button>
+            <button class="filter-chip" onclick="applyFilter('sales')">Capacitação Comercial & Vendas</button>
+            <button class="filter-chip" onclick="applyFilter('ops')">Governança & Escala</button>
+            <button class="filter-chip" onclick="applyFilter('data')">Modelagem de Dados & Credenciais</button>
+        </div>
+
+        <div class="cases-grid">
+
+            <!-- Card 1: Saúde / Medicina -->
+            <article class="case-card" data-domain="health">
+                <div>
+                    <div class="case-meta">
+                        <span class="meta-tag">Saúde / Educação Médica</span>
+                        <span class="meta-level">Complexidade Sistêmica</span>
+                    </div>
+                    <h3>Arquitetura de Aprendizagem Experiencial Híbrida</h3>
+                    <div class="case-subtitle">Pós-Graduação em Ultrassonografia Clínica Aplicada</div>
+                    <div class="narrative-block">
+                        <strong>O Desafio:</strong> Formar médicos atuantes em regime de plantão que necessitam de treinamento prático intensivo de console sem sobrecarga de exposições teóricas longas.
+                        <br><br>
+                        <strong>A Estruturação:</strong> Concepção de uma jornada com áudios clínicos de síntese para assimilação durante deslocamentos, diagnóstico formativo pré-presencial e matriz de validação que conecta imagens de exame a laudos clínicos estruturados.
+                    </div>
+                </div>
+                <div class="case-punchline">
+                    "Otimização do tempo de laboratório presencial com foco estrito no desenvolvimento da destreza prática e do raciocínio diagnóstico."
+                </div>
+            </article>
+
+            <!-- Card 2: SalesOps / Repositório Comercial -->
+            <article class="case-card" data-domain="sales">
+                <div>
+                    <div class="case-meta">
+                        <span class="meta-tag">Capacitação Comercial</span>
+                        <span class="meta-level">Arquitetura de Informação</span>
+                    </div>
+                    <h3>Centro de Inteligência de Produtos no AVA</h3>
+                    <div class="case-subtitle">Repositório de Suporte à Performance e Vendas Consultivas</div>
+                    <div class="narrative-block">
+                        <strong>O Desafio:</strong> Capacitar consultores comerciais para argumentar e contornar objeções técnicas sobre um portfólio extenso e multidisciplinar de cursos.
+                        <br><br>
+                        <strong>A Estruturação:</strong> Organização taxonômica de 9 macroáreas do saber em navegação estruturada em 3 níveis (máximo de 3 cliques), articulando guias práticos, simulações em áudio e pílulas em vídeo sobre proposta de valor e retorno sobre investimento.
+                    </div>
+                </div>
+                <div class="case-punchline">
+                    "Acesso ágil a argumentos técnicos qualificados diretamente no fluxo de atendimento ativo da equipe."
+                </div>
+            </article>
+
+            <!-- Card 3: Pós-MBA Executivo -->
+            <article class="case-card" data-domain="exec">
+                <div>
+                    <div class="case-meta">
+                        <span class="meta-tag">Programas Executivos</span>
+                        <span class="meta-level">Alta Complexidade</span>
+                    </div>
+                    <h3>Guia de Decisão Executiva & Trilha por Checkpoints</h3>
+                    <div class="case-subtitle">Formação Avançada em Liderança e Transformação</div>
+                    <div class="narrative-block">
+                        <strong>O Desafio:</strong> Transpor conteúdos densos sobre comportamento humano e gestão para uma trilha executiva voltada a tomadores de decisão.
+                        <br><br>
+                        <strong>A Estruturação:</strong> Criação de um playbook digital interativo estruturado em pílulas dialógicas e resolução progressiva de estudos de caso por meio de checkpoints de Diagnóstico, Estratégia e Decisão.
+                    </div>
+                </div>
+                <div class="case-punchline">
+                    "Conexão direta entre fundamentos conceituais e a prática de tomada de decisão estratégica em ambientes corporativos complexos."
+                </div>
+            </article>
+
+            <!-- Card 4: Dados & Microcredenciais -->
+            <article class="case-card" data-domain="data">
+                <div>
+                    <div class="case-meta">
+                        <span class="meta-tag">Dados & Credenciais</span>
+                        <span class="meta-level">Modelagem Semântica</span>
+                    </div>
+                    <h3>Arquitetura de Reconhecimento Contínuo por Competências</h3>
+                    <div class="case-subtitle">Modelagem de Badges Digitais Progressivas</div>
+                    <div class="narrative-block">
+                        <strong>O Desafio:</strong> Manter o engajamento e a percepção de valor do aluno ao longo de jornadas formativas modulares e extensas.
+                        <br><br>
+                        <strong>A Estruturação:</strong> Modelagem de uma matriz de maturidade profissional articulando níveis de complexidade cognitiva e critérios verificáveis para a emissão modular de insígnias digitais portáveis.
+                    </div>
+                </div>
+                <div class="case-punchline">
+                    "Reconhecimento gradual de competências que estimula a continuidade do percurso e valoriza o progresso do estudante no mercado."
+                </div>
+            </article>
+
+            <!-- Card 5: Conselho Profissional / Extensão -->
+            <article class="case-card" data-domain="ops">
+                <div>
+                    <div class="case-meta">
+                        <span class="meta-tag">Conselhos Profissionais</span>
+                        <span class="meta-level">Rigor Metodológico</span>
+                    </div>
+                    <h3>Curadoria Pedagógica para Formação em Inteligência Artificial</h3>
+                    <div class="case-subtitle">Extensão Nacional em Arquitetura e Urbanismo</div>
+                    <div class="narrative-block">
+                        <strong>O Desafio:</strong> Introduzir ferramentas de IA generativa e automação para profissionais seniores mantendo o foco na ética e responsabilidade técnica.
+                        <br><br>
+                        <strong>A Estruturação:</strong> Desenvolvimento de material didático interativo estruturado em blocos de engenharia de processos, orientando a criação de agentes especializados e a preservação do julgamento humano no projeto.
+                    </div>
+                </div>
+                <div class="case-punchline">
+                    "Transposição técnica qualificada que posiciona a tecnologia como suporte ao raciocínio autoral do especialista."
+                </div>
+            </article>
+
+            <!-- Card 6: Gestão de Escala / Governança -->
+            <article class="case-card" data-domain="ops">
+                <div>
+                    <div class="case-meta">
+                        <span class="meta-tag">Governança & Escala</span>
+                        <span class="meta-level">Alta Performance</span>
+                    </div>
+                    <h3>Esteira de Produção de Conteúdo Multimodal</h3>
+                    <div class="case-subtitle">Gestão de Processos e Padronização de Ativos Didáticos</div>
+                    <div class="narrative-block">
+                        <strong>O Desafio:</strong> Produzir e homologar dezenas de componentes curriculares simultâneos em diversas áreas do conhecimento com padrão homogêneo de qualidade.
+                        <br><br>
+                        <strong>A Estruturação:</strong> Implantação de fluxos padronizados de curadoria, roteirização e controle de qualidade para livros interativos, guias de navegação e podcasts didáticos, reduzindo retrabalhos.
+                    </div>
+                </div>
+                <div class="case-punchline">
+                    "Capacidade de sustentação de alto volume produtivo assegurando coerência metodológica e mitigação de sobrecarga cognitiva."
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Pilares de Competência & Governança -->
+    <section class="container pillars-section" id="competencias">
+        <div>
+            <span class="section-tag">Diferenciais & Competências</span>
+            <h2 class="section-heading">Fundamentos da Atuação Profissional</h2>
+            <p class="section-lead">A integração multidisciplinar entre Ciência da Informação, Modelagem de Dados e Comunicação orienta cada escolha metodológica.</p>
+        </div>
+        <div class="pillars-grid">
+            <div class="pillar-card">
+                <h3>Governança de Processos</h3>
+                <p>Estruturação de diretrizes e alinhamentos prévios que delimitam responsabilidades operacionais, evitam retrabalhos na esteira e asseguram a viabilidade do produto.</p>
+            </div>
+            <div class="pillar-card">
+                <h3>Gestão do Conhecimento</h3>
+                <p>Organização de repositórios, taxonomias e modelos mentais que preservam o raciocínio institucional e impedem a perda de inteligência educacional a cada ciclo.</p>
+            </div>
+            <div class="pillar-card">
+                <h3>Arquitetura da Informação</h3>
+                <p>Mapeamento de percursos de navegação intuitivos, estruturação de conteúdos complexos em etapas escaneáveis e minimização de atrito cognitivo em ambientes virtuais.</p>
+            </div>
+            <div class="pillar-card">
+                <h3>Avaliação por Evidências</h3>
+                <p>Substituição de modelos puramente memorísticos por frameworks avaliativos baseados na verificação de competências práticas, laudos técnicos e tomada de decisão.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Modern Vintage -->
+    <footer id="contato">
+        <div class="container footer-dialogue">
+            <h2>Vamos conversar sobre projetos e estruturas educacionais?</h2>
+            <p>
+                Para dialogar sobre governança de processos de produção em escala, modelagem de sistemas de aprendizagem, arquitetura da informação ou gestão do conhecimento institucional.
+            </p>
+            
+            <div class="cta-group">
+                <a href="mailto:ebomfim.lab@gmail.com" class="cta-btn cta-primary">✉️ Enviar um e-mail estratégico</a>
+                <a href="https://www.linkedin.com/in/elisabomfim/" target="_blank" class="cta-btn cta-secondary">🔗 Conectar no LinkedIn</a>
+            </div>
+
+            <div class="academic-links">
+                <a href="http://lattes.cnpq.br/0292927696224352" target="_blank">Currículo Lattes</a>
+                <a href="https://orcid.org/0000-0002-6844-7904" target="_blank">ORCID Acadêmico</a>
+            </div>
+
+            <div class="footer-ps">
+                Ambiente digital planejado com atenção à clareza informacional, governança de processos e curadoria humana.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts de Interatividade -->
+    <script>
+        // Rolagem suave do Carrossel Editorial
+        function scrollEditorial(direction) {
+            const track = document.getElementById('editorialSlider');
+            const cardWidth = 400;
+            track.scrollBy({
+                left: direction * cardWidth,
+                behavior: 'smooth'
+            });
+        }
+
+        // Filtro da Matriz Taxonômica
+        function applyFilter(category) {
+            const cards = document.querySelectorAll('.case-card');
+            const chips = document.querySelectorAll('.filter-chip');
+
+            chips.forEach(chip => chip.classList.remove('active'));
+            event.target.classList.add('active');
+
+            cards.forEach(card => {
+                const domain = card.getAttribute('data-domain');
+                if (category === 'all' || domain === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
