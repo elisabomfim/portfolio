@@ -125,6 +125,12 @@
             grid-template-columns: 1.15fr 0.85fr;
             gap: 3.5rem;
             margin-top: 2.5rem;
+            align-items: start;
+        }
+
+        .prose-column {
+            display: flex;
+            flex-direction: column;
         }
 
         .prose-text {
@@ -135,7 +141,42 @@
 
         .prose-text p { margin-bottom: 1.4rem; }
 
-        /* Manifesto de Escopo e Inovação */
+        /* Bloco Horizontal Destacado: Inovação & Estratégia Tecnológica */
+        .innovation-horizontal-box {
+            margin-top: 1.2rem;
+            background: linear-gradient(135deg, #FAF4EE 0%, #F3E7DC 100%);
+            border: 1px solid rgba(198, 134, 66, 0.35);
+            border-left: 5px solid var(--terracotta-raw);
+            border-radius: 6px;
+            padding: 1.8rem 2rem;
+            box-shadow: 0 4px 18px rgba(158, 71, 50, 0.07);
+        }
+
+        .innovation-horizontal-box .manifesto-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--terracotta-raw);
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .innovation-horizontal-box h3 {
+            font-size: 1.22rem;
+            font-weight: 700;
+            color: var(--espresso-dark);
+            margin-bottom: 0.8rem;
+            line-height: 1.35;
+        }
+
+        .innovation-horizontal-box p {
+            font-size: 0.94rem;
+            color: var(--espresso-soft);
+            line-height: 1.7;
+        }
+
+        /* Manifesto de Escopo (Coluna Lateral) */
         .manifesto-container {
             background: var(--vintage-paper);
             padding: 2.5rem;
@@ -155,8 +196,7 @@
             background: var(--gradient-gold-line);
         }
 
-        .manifesto-box { margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px dashed var(--border-strong); }
-        .manifesto-box:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+        .manifesto-box { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
 
         .manifesto-tag {
             font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--leather-amber); font-weight: 800; margin-bottom: 0.6rem; display: block;
@@ -297,7 +337,7 @@
             padding-top: 0.8rem;
         }
 
-        /* Cases */
+        /* Cases Reestruturados com Decisão & Trade-off */
         .cases-section { padding: 6rem 0; border-bottom: 1px solid var(--border-ink); }
         .section-header { margin-bottom: 3.5rem; }
         .section-heading { font-size: 2.3rem; font-weight: 800; letter-spacing: -0.02em; color: var(--espresso-dark); margin-bottom: 0.8rem; }
@@ -355,14 +395,14 @@
             display: inline-block;
         }
 
-        .process-grid {
+        .process-grid-decision {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1.8rem;
             margin-bottom: 1.8rem;
         }
 
-        .process-col h4 {
+        .decision-col h4 {
             font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 0.08em;
@@ -376,12 +416,12 @@
             font-weight: 800;
         }
 
-        .process-col h4 span {
+        .decision-col h4 span {
             color: var(--terracotta-raw);
             font-size: 1.1rem;
         }
 
-        .process-col p {
+        .decision-col p {
             font-size: 0.9rem;
             color: var(--espresso-soft);
             line-height: 1.65;
@@ -476,7 +516,7 @@
 
         /* Ajustes de Responsividade */
         @media (max-width: 900px) {
-            .prose-block, .process-grid, .chain-grid, .competencies-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .prose-block, .process-grid-decision, .chain-grid, .competencies-grid { grid-template-columns: 1fr; gap: 2rem; }
             .hero h1 { font-size: 2.1rem; }
             .case-card { padding: 2rem 1.5rem; }
             
@@ -503,28 +543,29 @@
 
     <!-- Hero Narrativo & Posicionamento Direto -->
     <section class="container hero">
-        <h1>Estruturo ecossistemas onde o conhecimento <em>sustenta decisões de negócio.</em></h1>
+        <h1>Estruturo ecossistemas onde o conhecimento <em>sustenta decisões de negócio</em></h1>
         
         <div class="prose-block">
-            <div class="prose-text">
-                <p>Sou Cientista da Informação por formação, Designer Instrucional por prática de mercado e pesquisadora em Banco de Dados por afinidade com a lógica das estruturas. Minha atuação não se limita a montar cursos isolados: eu atuo na <strong>Governança de Dados</strong>, na <strong>Gestão do Conhecimento</strong> e na organização de <strong>Sistemas Instrucionais</strong> heterogêneos.</p>
-                <p>No contexto organizacional, fazer sentido transcende o acabamento estético ou a leitura rápida. Fazer sentido é garantir que os dados que entram na operação sejam custodiados e auditáveis, que o capital intelectual não se perca com a rotatividade da equipe e que os conteúdos instrucionais resolvam gargalos reais de performance identificados por indicadores confiáveis de negócio.</p>
-            </div>
-            
-            <div class="manifesto-container" id="manifesto">
-                
-                <div class="manifesto-box">
+            <div class="prose-column">
+                <div class="prose-text">
+                    <p>Sou Cientista da Informação por formação, Designer Instrucional por prática de mercado e pesquisadora em Banco de Dados por afinidade com a lógica das estruturas. Minha atuação não se limita a montar cursos isolados: eu atuo na <strong>Governança de Dados</strong>, na <strong>Gestão do Conhecimento</strong> e na organização de <strong>Sistemas Instrucionais</strong> heterogêneos.</p>
+                    <p>No contexto organizacional, fazer sentido transcende o acabamento estético ou a leitura rápida. Fazer sentido é garantir que os dados que entram na operação sejam custodiados e auditáveis, que o capital intelectual não se perca com a rotatividade da equipe e que os conteúdos instrucionais resolvam gargalos reais de performance identificados por indicadores confiáveis de negócio.</p>
+                </div>
+
+                <!-- Bloco Reposicionado na Horizontal e com Destaque -->
+                <div class="innovation-horizontal-box">
                     <span class="manifesto-tag">Inovação & Estratégia Tecnológica</span>
                     <h3>Como eu uso Inteligência Artificial estrategicamente</h3>
                     <p>Mantenho um olhar contínuo para inovações e automações. No nível estratégico, emprego IA para acelerar diagnósticos analíticos, mapear padrões de competências em grandes volumes de dados e estruturar a base de ecossistemas instrucionais complexos. A IA atua na aceleração do processamento; a governança, a tomada de decisão semântica, o alinhamento institucional e o controle de qualidade final permanecem sob minha curadoria técnica e rigorosa.</p>
                 </div>
-
+            </div>
+            
+            <div class="manifesto-container" id="manifesto">
                 <div class="manifesto-box">
                     <span class="manifesto-tag">Alinhamento Executivo</span>
                     <h3>O que você pode (e o que não deve) me pedir</h3>
                     <p><strong>Minhas frentes de entrega:</strong> Atuo no nível tático-estratégico por meio de diagnósticos analíticos de gargalos operacionais, desenho estrutural de Ecossistemas Instrucionais complexos e engenharia de taxonomias corporativas. Implemento a governança necessária para produções em larga escala e lidero iniciativas de Gestão do Conhecimento focadas na blindagem e retenção do capital intelectual da organização.<br><br><strong>O que não está no meu escopo:</strong> Execução operacional de design, animações, diagramação e edição audiovisual. Meu foco está na engenharia e arquitetura estratégica dos sistemas, onde meu potencial gera o máximo retorno para o projeto.</p>
                 </div>
-
             </div>
         </div>
     </section>
@@ -631,13 +672,13 @@
         </div>
     </section>
 
-    <!-- Casos Reais: Estrutura Projeto -> Material -> Competências com Blindagem -->
+    <!-- Casos Reais: Estrutura Baseada em Decisão Sob Restrição & Trade-Offs -->
     <section class="cases-section" id="cases">
         <div class="container">
             <div class="section-header">
                 <span class="manifesto-tag">Demonstrações Práticas</span>
                 <h2 class="section-heading">Projetos reais e problemas que solucionei</h2>
-                <p class="section-lead">Evidências de como intervenho no diagnóstico de fricções, na arquitetura de decisões e na validação institucional sem expor receitas internas:</p>
+                <p class="section-lead">Evidências de como intervenho no diagnóstico de fricções, na análise de rotas alternativas e na tomada de decisão arquitetural sob restrições reais de negócio:</p>
             </div>
 
             <!-- CASE 1: Reformulação Metodológica Institucional EaD -->
@@ -648,18 +689,18 @@
                     <div class="case-skills-tag">Competências: Engenharia Pedagógica · Design de Ciclos Experienciais · Arquitetura Curricular</div>
                 </div>
 
-                <div class="process-grid">
-                    <div class="process-col">
+                <div class="process-grid-decision">
+                    <div class="decision-col">
                         <h4><span>A.</span> Cenário & Fricção</h4>
                         <p>Necessidade de modernizar a matriz institucional de EaD para Graduação e Pós-Graduação, superando modelos expositivos passivos e conectando a teoria diretamente a desafios reais do mercado de trabalho.</p>
                     </div>
-                    <div class="process-col">
-                        <h4><span>B.</span> Decisão Estrutural</h4>
-                        <p>Concepção de um modelo baseado no Ciclo de Aprendizagem Experiencial em 4 etapas cognitivas estruturadas: Agir (Imersão), Refletir (Aprofundamento), Conceitualizar (Cocriação) e Aplicar (Validação de Competência).</p>
+                    <div class="decision-col">
+                        <h4><span>B.</span> Rotas & Trade-Offs</h4>
+                        <p>Ajustes cosméticos manteriam o modelo passivo; focar apenas em desafios práticos comprometeria a consistência conceitual. A tensão central era: <strong>metodologia versus ruptura estrutural</strong>.</p>
                     </div>
-                    <div class="process-col">
-                        <h4><span>C.</span> Apoio com IA</h4>
-                        <p>Pesquisas exploratórias de tendências educacionais e apoio na roteirização conceitual de podcasts e pílulas de reforço adaptativo para o ambiente virtual.</p>
+                    <div class="decision-col">
+                        <h4><span>C.</span> Decisão & Arquitetura</h4>
+                        <p>Adoção do Ciclo Experiencial em 4 etapas (Agir, Refletir, Conceitualizar e Aplicar) articulando percursos flexíveis a Livros Interativos e Aulas Práticas, equilibrando prática real e densidade teórica.</p>
                     </div>
                 </div>
 
@@ -681,18 +722,18 @@
                     <div class="case-skills-tag">Competências: Diagnóstico de Gargalos · Governança de Sistemas · Viabilidade de Produto (PRD)</div>
                 </div>
 
-                <div class="process-grid">
-                    <div class="process-col">
+                <div class="process-grid-decision">
+                    <div class="decision-col">
                         <h4><span>A.</span> Cenário & Fricção</h4>
-                        <p>Operação educacional sobrecarregada por extrações manuais de dados em planilhas para monitorar retenção e risco de evasão, gerando lentidão, retrabalho e potenciais riscos de privacidade e segurança da informação.</p>
+                        <p>Operação educacional sobrecarregada por extrações manuais de dados em planilhas para monitorar retenção e risco de evasão, gerando lentidão, retrabalho e potenciais riscos de privacidade de dados.</p>
                     </div>
-                    <div class="process-col">
-                        <h4><span>B.</span> Decisão Estrutural</h4>
-                        <p>Mapeamento e estruturação de uma defesa executiva para ativação de protocolos nativos de interoperabilidade (LTI) no ambiente virtual, contornando a inércia técnica sem custos adicionais de licenciamento.</p>
+                    <div class="decision-col">
+                        <h4><span>B.</span> Rotas & Trade-Offs</h4>
+                        <p>Automatizar planilhas manteria a operação vulnerável; contratar ferramentas externas geraria custos altos de licenciamento. A tensão central era: <strong>automação versus infraestrutura existente</strong>.</p>
                     </div>
-                    <div class="process-col">
-                        <h4><span>C.</span> Apoio com IA</h4>
-                        <p>Análise exploratória preliminar de especificações de integração para acelerar a redação e a fundamentação executiva do dossiê de viabilidade.</p>
+                    <div class="decision-col">
+                        <h4><span>C.</span> Decisão & Arquitetura</h4>
+                        <p>Investigação e estruturação de uma defesa executiva para ativação de protocolos nativos de interoperabilidade LTI no AVA, eliminando gargalos manuais sem introduzir custos adicionais de software.</p>
                     </div>
                 </div>
 
@@ -702,7 +743,7 @@
                 </div>
                 
                 <div class="case-result">
-                    Validação Demonstrada: Reconhecimento executivo da Diretoria quanto à viabilidade e ausência de custos, estabelecendo a base para modernização dos fluxos operacionais de dados.</p>
+                    Validação Demonstrada: Reconhecimento executivo da Diretoria quanto à viabilidade e ausência de custos, estabelecendo a base para modernização dos fluxos operacionais de dados.
                 </div>
             </article>
 
@@ -714,18 +755,18 @@
                     <div class="case-skills-tag">Competências: Engenharia de Processos (DesignOps) · Governança Operacional · Métodos Ágeis</div>
                 </div>
 
-                <div class="process-grid">
-                    <div class="process-col">
+                <div class="process-grid-decision">
+                    <div class="decision-col">
                         <h4><span>A.</span> Cenário & Fricção</h4>
                         <p>Produção simultânea de centenas de componentes curriculares gerando retrabalhos recorrentes em estúdio, risco orçamentário e falta de alinhamento prévio entre docentes e equipes de captação.</p>
                     </div>
-                    <div class="process-col">
-                        <h4><span>B.</span> Decisão Estrutural</h4>
-                        <p>Implementação de métodos ágeis combinados a travas de conformidade antes da gravação e esteiras padronizadas de transposição didática com papéis técnicos e responsabilidades formalmente delimitados.</p>
+                    <div class="decision-col">
+                        <h4><span>B.</span> Rotas & Trade-Offs</h4>
+                        <p>Acelerar a esteira sem regras apenas multiplicaria os erros; controlar a qualidade no final tornaria as correções caras. A tensão central era: <strong>escala produtiva versus controle de qualidade</strong>.</p>
                     </div>
-                    <div class="process-col">
-                        <h4><span>C.</span> Apoio com IA</h4>
-                        <p>Automação de rotinas para checagem preliminar de conformidade estrutural de textos brutos e padronização de metadados das entregas em larga escala.</p>
+                    <div class="decision-col">
+                        <h4><span>C.</span> Decisão & Arquitetura</h4>
+                        <p>Atuação prévia à gravação com travas de conformidade, matrizes de papéis e responsabilidades, esteiras padronizadas de transposição e governança ágil para blindar o orçamento na origem.</p>
                     </div>
                 </div>
 
@@ -747,18 +788,18 @@
                     <div class="case-skills-tag">Competências: Gestão do Conhecimento · Arquitetura de Informação · Design UX</div>
                 </div>
 
-                <div class="process-grid">
-                    <div class="process-col">
+                <div class="process-grid-decision">
+                    <div class="decision-col">
                         <h4><span>A.</span> Cenário & Fricção</h4>
                         <p>Diretriz corporativa de capacitar consultores sobre 9 macroáreas do saber com o desafio de evitar a dispersão de informações e a perda de tempo na busca de dados durante vendas ativas.</p>
                     </div>
-                    <div class="process-col">
-                        <h4><span>B.</span> Decisão Estrutural</h4>
-                        <p>Mapeamento taxonômico em 3 níveis de navegação (máximo de 3 cliques) e padronização visual com foco em escaneabilidade e consulta rápida durante o atendimento.</p>
+                    <div class="decision-col">
+                        <h4><span>B.</span> Rotas & Trade-Offs</h4>
+                        <p>Centralizar arquivos em pastas manteria a busca lenta; organizar por setor facilitaria o cadastro, mas frustraria o vendedor. A tensão central era: <strong>organização interna versus encontrabilidade</strong>.</p>
                     </div>
-                    <div class="process-col">
-                        <h4><span>C.</span> Apoio com IA</h4>
-                        <p>Uso de IA para suporte no mapeamento semântico e categorização lógica das macro e microáreas do conhecimento para a árvore taxonômica.</p>
+                    <div class="decision-col">
+                        <h4><span>C.</span> Decisão & Arquitetura</h4>
+                        <p>Inversão da lógica documental para o modelo mental de consulta: taxonomia em 3 níveis (máximo 3 cliques) e layout escaneável para recuperação imediata em tempo real de negociação.</p>
                     </div>
                 </div>
 
@@ -780,18 +821,18 @@
                     <div class="case-skills-tag">Competências: Arquitetura Instrucional · Reorganização Lógica no AVA · Roteirização Estratégica</div>
                 </div>
 
-                <div class="process-grid">
-                    <div class="process-col">
+                <div class="process-grid-decision">
+                    <div class="decision-col">
                         <h4><span>A.</span> Cenário & Fricção</h4>
                         <p>Gravações brutas de estúdio apresentavam descompasso com a metodologia do programa de alta liderança, gerando lacunas sobre a dinâmica de simulação do estudo de caso.</p>
                     </div>
-                    <div class="process-col">
-                        <h4><span>B.</span> Decisão Estrutural</h4>
-                        <p>Reorganização lógica da trilha no AVA em checkpoints de decisão (Diagnóstico, Estratégia e Decisão) e curadoria para formato dialógico executivo.</p>
+                    <div class="decision-col">
+                        <h4><span>B.</span> Rotas & Trade-Offs</h4>
+                        <p>Regravar todo o conteúdo estouraria o orçamento e o prazo; manter como estava comprometeria a experiência executiva. A tensão central era: <strong>aderência metodológica versus custo e cronograma</strong>.</p>
                     </div>
-                    <div class="process-col">
-                        <h4><span>C.</span> Apoio com IA</h4>
-                        <p>Roteirização estratégica de aulas com recursos sintéticos de IA para introdução e contextualização metodológica, suprindo lacunas de estúdio sem custo de regravação.</p>
+                    <div class="decision-col">
+                        <h4><span>C.</span> Decisão & Arquitetura</h4>
+                        <p>Reestruturação lógica do percurso em checkpoints de decisão (Diagnóstico, Estratégia e Decisão) e roteirização pontual com recursos sintéticos de IA para preencher lacunas sem novas filmagens.</p>
                     </div>
                 </div>
 
@@ -799,7 +840,7 @@
                     <h4>Entrega Chave</h4>
                     <p>Pacote instrucional reformulado em diálogo com as diretrizes do curso e soluções de aulas roteirizadas para produção sintética com IA.</p>
                 </div>
-
+                
                 <div class="case-result">
                     Validação Demonstrada: Salvaguarda da margem orçamentária do projeto, cumprimento do cronograma e entrega de trilha executiva alinhada às premissas originais.
                 </div>
@@ -813,18 +854,18 @@
                     <div class="case-skills-tag">Competências: Andragogia Médica · Interação em Áudio · Modelagem de Avaliação Prévia</div>
                 </div>
 
-                <div class="process-grid">
-                    <div class="process-col">
+                <div class="process-grid-decision">
+                    <div class="decision-col">
                         <h4><span>A.</span> Cenário & Fricção</h4>
                         <p>Médicos em plantão precisavam de treinamento prático de alta performance em equipamentos, mas não dispunham de tempo para aulas teóricas expositivas extensas.</p>
                     </div>
-                    <div class="process-col">
-                        <h4><span>B.</span> Decisão Estrutural</h4>
-                        <p>Proposta metodológica híbrida com áudios analíticos assíncronos e avaliação prévia via envio de áudio para nivelamento das práticas presenciais guiadas.</p>
+                    <div class="decision-col">
+                        <h4><span>B.</span> Rotas & Trade-Offs</h4>
+                        <p>Teoria antes da prática consumiria o escasso tempo dos médicos; focar só no presencial geraria turmas desbalanceadas em laboratório. A tensão central era: <strong>teoria necessária versus tempo disponível</strong>.</p>
                     </div>
-                    <div class="process-col">
-                        <h4><span>C.</span> Apoio com IA</h4>
-                        <p>Emprego de ferramentas de IA para pesquisas aprofundadas sobre rotinas e necessidades de aprendizagem do público médico.</p>
+                    <div class="decision-col">
+                        <h4><span>C.</span> Decisão & Arquitetura</h4>
+                        <p>Redistribuição cognitiva: fundamentação em áudios assíncronos (on-the-go) e avaliação diagnóstica prévia por áudio, reservando 100% do encontro presencial para treino técnico de console.</p>
                     </div>
                 </div>
 
@@ -832,7 +873,7 @@
                     <h4>Entrega Chave</h4>
                     <p>Matriz de aprendizagem e sistema avaliativo humanizado que considera a bagagem dos profissionais, integrando diagnóstico prévio e validação somativa por laudos.</p>
                 </div>
-
+                
                 <div class="case-result">
                     Validação Demonstrada: Maximização total do tempo presencial de laboratório, foco no treino técnico de console e respeito à rotina do médico.
                 </div>
@@ -846,18 +887,18 @@
                     <div class="case-skills-tag">Competências: Governança de Dados · Modelagem Semântica · Mapeamento de Competências</div>
                 </div>
 
-                <div class="process-grid">
-                    <div class="process-col">
+                <div class="process-grid-decision">
+                    <div class="decision-col">
                         <h4><span>A.</span> Cenário & Fricção</h4>
                         <p>Cursos de longa duração com desengajamento progressivo devido à postergação da certificação exclusivamente para o término do programa.</p>
                     </div>
-                    <div class="process-col">
-                        <h4><span>B.</span> Decisão Estrutural</h4>
-                        <p>Modelagem de matriz de maturidade profissional articulando níveis de complexidade a critérios verificáveis para emissão modular e contínua de insígnias.</p>
+                    <div class="decision-col">
+                        <h4><span>B.</span> Rotas & Trade-Offs</h4>
+                        <p>Manter o certificado apenas ao final deixaria o avanço invisível; fragmentar sem critério desvalorizaria o reconhecimento. A tensão central era: <strong>certificação final versus evidência progressiva</strong>.</p>
                     </div>
-                    <div class="process-col">
-                        <h4><span>C.</span> Apoio com IA</h4>
-                        <p>Uso de IA para correlacionar ementas com descritores de mercado, calibrando os metadados das insígnias para assegurar interoperabilidade.</p>
+                    <div class="decision-col">
+                        <h4><span>C.</span> Decisão & Arquitetura</h4>
+                        <p>Estruturação de uma matriz de maturidade profissional vinculada a critérios verificáveis, transformando o percurso em emissões modulares de insígnias com metadados portáveis no mercado.</p>
                     </div>
                 </div>
 
@@ -865,7 +906,7 @@
                     <h4>Entrega Chave</h4>
                     <p>Arquitetura de microcredenciais modular com regras padronizadas para emissão contínua de insígnias digitais e comprovação transparente de habilidades.</p>
                 </div>
-
+                
                 <div class="case-result">
                     Validação Demonstrada: Estímulo à continuidade formativa, visibilidade do progresso do estudante e portabilidade de competências no mercado.
                 </div>
