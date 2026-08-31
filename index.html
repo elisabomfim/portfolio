@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Governança de Dados, Gestão do Conhecimento & Arquitetura Instrucional</title>
     
+    <!-- Tipografia Sans-Serif Moderna e Limpa -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
@@ -48,7 +49,7 @@
 
         .container { max-width: 1120px; margin: 0 auto; padding: 0 2rem; }
 
-        /* Header & Menu Compactado */
+        /* Header & Menu */
         header {
             padding: 0.85rem 0;
             border-bottom: 1px solid var(--border-ink);
@@ -111,12 +112,6 @@
             margin-bottom: 2rem;
             color: var(--espresso-dark);
             max-width: 980px;
-        }
-
-        .hero h1 em {
-            font-style: normal;
-            font-weight: 800;
-            color: var(--terracotta-raw);
         }
 
         .prose-block {
@@ -198,11 +193,18 @@
         .manifesto-box { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
 
         .manifesto-tag {
-            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--leather-amber); font-weight: 800; margin-bottom: 0.6rem; display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--leather-amber);
+            font-weight: 800;
+            margin-bottom: 0.6rem;
+            display: block;
         }
 
         .manifesto-box h3 { font-size: 1.25rem; font-weight: 700; color: var(--espresso-dark); margin-bottom: 0.8rem; }
-        .manifesto-box p { font-size: 0.92rem; color: var(--espresso-soft); line-height: 1.65; }
+        .manifesto-box p { font-size: 0.92rem; color: var(--espresso-soft); line-height: 1.65; margin-bottom: 1rem; }
+        .manifesto-box p:last-child { margin-bottom: 0; }
 
         /* Seção: Eixos Estratégicos e Competências Técnicas */
         .multidisciplinary-section {
@@ -246,7 +248,7 @@
             line-height: 1.75;
         }
 
-        /* Bloco de Destaque: Mestrado & Pesquisa em Ecossistemas Digitais */
+        /* Bloco de Destaque: Mestrado & Pesquisa */
         .mastery-highlight-box {
             margin-top: 3rem;
             background: var(--vintage-paper);
@@ -261,9 +263,6 @@
             font-weight: 700;
             color: var(--espresso-dark);
             margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
         }
 
         .mastery-highlight-box p {
@@ -277,66 +276,34 @@
             margin-bottom: 0;
         }
 
-        /* Framework Operacional */
-        .value-chain-section {
-            padding: 5rem 0;
-            border-bottom: 1px solid var(--border-ink);
-            background: var(--vintage-linen);
-        }
-
-        .chain-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-            margin-top: 3rem;
-        }
-
-        .chain-step {
+        /* Seção: Como penso a arquitetura */
+        .architecture-concept-section {
+            padding: 5.5rem 0;
             background: var(--vintage-paper);
-            border: 1px solid var(--border-ink);
-            padding: 2rem 1.5rem;
-            border-radius: 4px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: var(--shadow-paper);
-            border-top: 4px solid var(--terracotta-raw);
+            border-bottom: 1px solid var(--border-ink);
         }
 
-        .step-num {
-            font-size: 2rem;
+        .concept-box {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .concept-box h3 {
+            font-size: 1.8rem;
             font-weight: 800;
-            color: var(--terracotta-raw);
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        .chain-step h4 {
-            font-size: 1.1rem;
-            font-weight: 700;
             color: var(--espresso-dark);
-            margin-bottom: 0.8rem;
-            line-height: 1.35;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.01em;
         }
 
-        .chain-step p {
-            font-size: 0.88rem;
+        .concept-box p {
+            font-size: 1.05rem;
             color: var(--espresso-soft);
-            line-height: 1.6;
-            margin-bottom: 1rem;
+            line-height: 1.9;
         }
 
-        .step-data-focus {
-            font-size: 0.78rem;
-            font-weight: 700;
-            color: var(--leather-amber);
-            font-style: italic;
-            border-top: 1px solid var(--border-ink);
-            padding-top: 0.8rem;
-            line-height: 1.5;
-        }
-
-        /* Cases Reestruturados com Decisão */
+        /* Seção: Casos Reais */
         .cases-section { padding: 6rem 0; border-bottom: 1px solid var(--border-ink); }
         .section-header { margin-bottom: 3.5rem; }
         .section-heading { font-size: 2.3rem; font-weight: 800; letter-spacing: -0.02em; color: var(--espresso-dark); margin-bottom: 0.8rem; }
@@ -392,6 +359,16 @@
             border-radius: 4px;
             border-left: 3px solid var(--terracotta-raw);
             display: inline-block;
+        }
+
+        .guiding-proposal {
+            background: rgba(198, 134, 66, 0.08);
+            border-left: 3px solid var(--leather-amber);
+            padding: 0.8rem 1.2rem;
+            margin-bottom: 1.8rem;
+            font-size: 0.95rem;
+            color: var(--espresso-dark);
+            border-radius: 0 4px 4px 0;
         }
 
         .process-grid-decision {
@@ -457,27 +434,45 @@
             font-weight: 600;
         }
 
-        /* Editorial Section */
+        /* Editorial Section (Carrossel Horizontal de Ensaios) */
         .editorial-section { padding: 5.5rem 0; background: var(--vintage-linen); border-bottom: 1px solid var(--border-ink); }
         
         .carousel-track {
-            display: flex; gap: 1.5rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 1rem 0 2rem 0;
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 1rem 0 2rem 0;
         }
         .carousel-track::-webkit-scrollbar { height: 6px; }
         .carousel-track::-webkit-scrollbar-thumb { background: var(--terracotta-raw); border-radius: 3px; }
 
         .essay-card {
-            flex: 0 0 360px; scroll-snap-align: start; background: var(--vintage-paper); padding: 2.2rem 1.8rem; border: 1px solid var(--border-ink); border-radius: 4px; display: flex; flex-direction: column; justify-content: space-between; transition: var(--transition);
+            flex: 0 0 360px;
+            scroll-snap-align: start;
+            background: var(--vintage-paper);
+            padding: 2.2rem 1.8rem;
+            border: 1px solid var(--border-ink);
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition);
         }
         .essay-card:hover { border-color: var(--terracotta-raw); transform: translateY(-3px); box-shadow: var(--shadow-hover); }
 
         .essay-badge {
-            font-size: 0.72rem; text-transform: uppercase; font-weight: 800; color: var(--terracotta-raw); margin-bottom: 0.8rem; letter-spacing: 0.05em;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            color: var(--terracotta-raw);
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.05em;
         }
 
         .essay-card h4 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.8rem; line-height: 1.35; color: var(--espresso-dark); }
         .essay-card p { font-size: 0.88rem; color: var(--espresso-soft); line-height: 1.6; margin-bottom: 1.2rem; }
-        .essay-link { font-size: 0.85rem; font-weight: 800; color: var(--terracotta-raw); text-decoration: none; border-top: 1px solid var(--border-ink); padding-top: 0.8rem; }
+        .essay-link { font-size: 0.85rem; font-weight: 800; color: var(--terracotta-raw); text-decoration: none; border-top: 1px solid var(--border-ink); padding-top: 0.8rem; display: inline-block; }
 
         /* Footer */
         footer { background-color: var(--espresso-dark); color: var(--vintage-cream); padding: 5.5rem 0 4rem 0; border-top: 4px solid var(--terracotta-raw); text-align: center; }
@@ -513,9 +508,9 @@
 
         .footer-ps { font-size: 0.82rem; color: rgba(248, 244, 237, 0.5); font-style: italic; margin-top: 0.5rem; }
 
-        /* Ajustes de Responsividade */
+        /* Responsividade */
         @media (max-width: 900px) {
-            .prose-block, .process-grid-decision, .chain-grid, .competencies-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .prose-block, .process-grid-decision, .competencies-grid { grid-template-columns: 1fr; gap: 2rem; }
             .hero h1 { font-size: 2.1rem; }
             .case-card { padding: 2rem 1.5rem; }
             
@@ -532,16 +527,17 @@
         <div class="container header-inner">
             <ul class="nav-links">
                 <li><a href="#competencias">Eixos Estratégicos</a></li>
-                <li><a href="#framework">Framework Operacional</a></li>
-                <li><a href="#cases">Casos Reais</a></li>
-                <li><a href="#editorial">Ensaios & Reflexões</a></li>
+                <li><a href="#arquitetura">Arquitetura</a></li>
+                <li><a href="#cases">Projetos Reais</a></li>
+                <li><a href="#editorial">Posicionamento</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </div>
     </header>
 
+    <!-- Hero Narrativo & Posicionamento Direto -->
     <section class="container hero">
-        <h1>Estruturo ecossistemas onde o conhecimento <em>sustenta decisões de negócio</em></h1>
+        <h1>Estruturo ecossistemas onde o conhecimento sustenta decisões de negócio</h1>
         
         <div class="prose-block">
             <div class="prose-column">
@@ -550,6 +546,7 @@
                     <p>No contexto organizacional, fazer sentido transcende o acabamento estético ou a leitura rápida. Fazer sentido é garantir que os dados que entram na operação sejam custodiados e auditáveis, que o capital intelectual não se perca com a rotatividade da equipe e que os conteúdos instrucionais resolvam gargalos reais de performance identificados por indicadores confiáveis de negócio.</p>
                 </div>
 
+                <!-- Bloco Horizontal Destacado: Inovação & Estratégia Tecnológica -->
                 <div class="innovation-horizontal-box">
                     <span class="manifesto-tag">Inovação & Estratégia Tecnológica</span>
                     <h3>Como eu uso Inteligência Artificial estrategicamente</h3>
@@ -557,39 +554,46 @@
                 </div>
             </div>
             
+            <!-- Bloco Lateral: Alinhamento Executivo -->
             <div class="manifesto-container" id="manifesto">
                 <div class="manifesto-box">
                     <span class="manifesto-tag">Alinhamento Executivo</span>
                     <h3>O que você pode (e o que não deve) me pedir</h3>
-                    <p><strong>Minhas frentes de entrega:</strong> Atuo no nível tático-estratégico por meio de diagnósticos analíticos de gargalos operacionais, desenho estrutural de Ecossistemas Instrucionais complexos e engenharia de taxonomias corporativas. Implemento a governança necessária para produções em larga escala e lidero iniciativas de Gestão do Conhecimento focadas na blindagem e retenção do capital intelectual da organização.<br><br><strong>O que não está no meu escopo:</strong> Execução operacional de design, animações, diagramação e edição audiovisual. Meu foco está na engenharia e arquitetura estratégica dos sistemas, onde meu potencial gera o máximo retorno para o projeto.</p>
+                    <p><strong>Minhas frentes de entrega:</strong> Atuo no nível tático-estratégico por meio de diagnósticos analíticos de gargalos operacionais, desenho estrutural de Ecossistemas Instrucionais complexos e engenharia de taxonomias corporativas. Implemento a governança necessária para produções em larga escala e lidero iniciativas de Gestão do Conhecimento focadas na blindagem e retenção do capital intelectual da organização.</p>
+                    <p><strong>O que não está no meu escopo:</strong> Execução operacional de design, animações, diagramação e edição audiovisual. Meu foco está na engenharia e arquitetura estratégica dos sistemas, onde meu potencial gera o máximo retorno para o projeto.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Seção Destaque: Eixos Estratégicos e Competências Técnicas -->
     <section class="multidisciplinary-section" id="competencias">
         <div class="container">
             <span class="manifesto-tag">Repertório Estratégico</span>
             <h2 class="section-heading">Eixos Estratégicos e Competências Técnicas</h2>
-            <p class="section-lead">A minha atuação une engenharia de processos, arquitetura de sistemas instrucionais e governança de dados para desenhar, escalar e otimizar o ciclo de vida de produtos educacionais digitais de alta complexidade. Os quatro eixos abaixo são o repertório técnico que sustenta cada uma das etapas do Framework Operacional apresentado mais adiante — este é o processo; aqueles são as competências que o viabilizam.</p>
+            <p class="section-lead">A minha atuação une engenharia de processos, arquitetura de sistemas instrucionais e governança de dados para desenhar, escalar e otimizar o ciclo de vida de produtos educacionais digitais de alta complexidade. Os quatro eixos abaixo resumem o repertório técnico por trás dessas decisões.</p>
 
             <div class="competencies-grid">
 
+                <!-- 1. Governança, Arquitetura da Informação e Conformidade de Dados -->
                 <div class="competency-card">
                     <h3>Governança, Arquitetura da Informação e Conformidade de Dados</h3>
                     <p>Domínio na estruturação e modelagem semântica de microcredenciamento alinhada ao padrão Open Badges e taxonomias complexas de aprendizagem. Atuação direta na engenharia de ontologias institucionais e taxonomia de dados, convertendo fluxos de conhecimento dispersos em repositórios inteligentes e ágeis. Aplicação rigorosa de diretrizes de governança da informação e proteção à privacidade (LGPD), assegurando a qualidade e a linhagem dos dados na origem antes da integração em ecossistemas de Business Intelligence.</p>
                 </div>
 
+                <!-- 2. DesignOps e Engenharia de Processos em Larga Escala -->
                 <div class="competency-card">
                     <h3>DesignOps e Engenharia de Processos em Larga Escala</h3>
                     <p>Liderança técnica e implementação de frameworks ágeis (Scrum/Kanban) para a sustentação de alta vazão produtiva em equipes multidisciplinares. Responsável pela criação de travas de qualidade analíticas, matrizes de governança e manuais operacionais pré-produção. Essa padronização mitiga refações no ambiente virtual de aprendizagem, protege a margem orçamentária institucional e viabiliza a entrega simultânea de grandes volumes de componentes curriculares com rigor e velocidade.</p>
                 </div>
 
+                <!-- 3. Arquitetura de Sistemas Instrucionais e Experiência do Usuário -->
                 <div class="competency-card">
                     <h3>Arquitetura de Sistemas Instrucionais e Experiência do Usuário</h3>
                     <p>Desenho de percursos híbridos complexos e trilhas de aprendizagem executiva orientadas a tomadas de decisão. Desenvolvimento de ecossistemas focados na mitigação da carga cognitiva de aprendizes adultos por meio de princípios de arquitetura de navegação limpa e design centrado na usabilidade. Substituição de avaliações puramente memorísticas por frameworks de avaliação autêntica baseada em evidências, cenários progressivos e laudos auditáveis de proficiência técnica.</p>
                 </div>
 
+                <!-- 4. EdTech Ops e Inovação Tecnológica Aplicada -->
                 <div class="competency-card">
                     <h3>EdTech Ops e Inovação Tecnológica Aplicada</h3>
                     <p>Curadoria estratégica e aplicação de Inteligência Artificial generativa para roteirização e extração de padrões taxonômicos sem necessidade de refações materiais. Capacidade de transposição didática avançada para a organização lógica de conteúdos em plataformas heterogêneas. Domínio no desenho de fluxos instrucionais, análise de funis de engajamento e retenção ativa de usuários em ecossistemas digitais.</p>
@@ -597,6 +601,7 @@
 
             </div>
 
+            <!-- Bloco de Destaque: Mestrado & Pesquisa em Ecossistemas Digitais -->
             <div class="mastery-highlight-box">
                 <span class="manifesto-tag">Pesquisa Aplicada & Ecossistemas Digitais</span>
                 <h3>Mestrado em Comunicação (Mídia e Informação) & Atuação Científica</h3>
@@ -610,54 +615,20 @@
         </div>
     </section>
 
-    <section class="value-chain-section" id="framework">
+    <!-- Seção: Como penso a arquitetura de um ecossistema instrucional -->
+    <section class="architecture-concept-section" id="arquitetura">
         <div class="container">
-            <span class="manifesto-tag">Framework Operacional</span>
-            <h2 class="section-heading">Meu Framework Operacional: Decisões Baseadas em Dados</h2>
-            <p class="section-lead">Um modelo universal aplicável a Sistemas Instrucionais variados — desde ambientes virtuais tradicionais a plataformas de experiência, simuladores e ecossistemas corporativos integrados:</p>
-
-            <div class="chain-grid">
-                
-                <div class="chain-step">
-                    <div>
-                        <div class="step-num">01</div>
-                        <h4>Captação Adaptativa & Governança de Dados</h4>
-                        <p>No meu modelo, o dado bruto e comportamental não entram no ecossistema sem regras. Estabeleço a governança definindo linhagem, conformidade com a privacidade (LGPD), limpeza e integração de fontes instrucionais para eliminar silos informacionais e garantir insumos confiáveis para o design.</p>
-                    </div>
-                    <div class="step-data-focus">Entrega: dados de entrada auditáveis, íntegros, seguros e mapeamento de evidências.</div>
-                </div>
-
-                <div class="chain-step">
-                    <div>
-                        <div class="step-num">02</div>
-                        <h4>Semântica & Engenharia do Conhecimento</h4>
-                        <p>Crio taxonomias e ontologias que conectam ativos instrucionais variados a matrizes de competência da organização. Garanto que todos os conteúdos possuam metadados inteligentes para recuperação ágil, perenidade organizacional e interoperabilidade entre diferentes plataformas e sistemas.</p>
-                    </div>
-                    <div class="step-data-focus">Entrega: mapeamento de lacunas, classificação semântica e retenção de ativos de conhecimento.</div>
-                </div>
-
-                <div class="chain-step">
-                    <div>
-                        <div class="step-num">03</div>
-                        <h4>Modelagem Analítica & Prescrição Sistêmica</h4>
-                        <p>Cruzo os dados e as ontologias instrucionais para fundamentar decisões mais assertivas. Substituo a intuição por modelos preditivos que definem e recomendam as intervenções e formatos ideais para sanar gargalos reais de performance.</p>
-                    </div>
-                    <div class="step-data-focus">Entrega: prescrições instrucionais precisas e arquitetura de decisão para sistemas variados.</div>
-                </div>
-
-                <div class="chain-step">
-                    <div>
-                        <div class="step-num">04</div>
-                        <h4>Experiência & Telemetria Contínua</h4>
-                        <p>Entrego a experiência no formato instrucional adequado. A interação do usuário gera telemetria de retenção e aplicação prática, servindo de insumo analítico para aprimoramento contínuo.</p>
-                    </div>
-                    <div class="step-data-focus">Entrega: retroalimentação orientada por evidências.</div>
-                </div>
-
+            <div class="concept-box">
+                <span class="manifesto-tag">Visão Sistêmica</span>
+                <h3>Como penso a arquitetura de um ecossistema instrucional</h3>
+                <p>
+                    Minhas decisões atravessam quatro domínios que se retroalimentam: a governança dos dados que entram no sistema, a organização semântica do conhecimento que sustenta esses dados, a leitura analítica que converte esse conhecimento em prescrição instrucional, e a telemetria de uso que informa os ajustes seguintes. Não trato nenhum desses domínios como etapa isolada — cada entrega é avaliada pela capacidade de alimentar o domínio seguinte, num ciclo contínuo de refinamento orientado por evidências.
+                </p>
             </div>
         </div>
     </section>
 
+    <!-- Casos Reais: Projetos reais e problemas que solucionei -->
     <section class="cases-section" id="cases">
         <div class="container">
             <div class="section-header">
@@ -666,11 +637,16 @@
                 <p class="section-lead">Evidências de como intervenho no diagnóstico de fricções, na arquitetura de decisões e na validação institucional, sem expor a lógica interna de decisão nem receitas metodológicas proprietárias:</p>
             </div>
 
+            <!-- PROJETO: REFORMULAÇÃO METODOLÓGICA INSTITUCIONAL DO EAD -->
             <article class="case-card">
                 <div class="case-header">
                     <span class="case-project-name">Projeto: Reformulação Metodológica Institucional do EaD</span>
                     <h3 class="case-material-title">O Material Produzido: Abordagem Metodológica "Aprendizagem Conectada e Orientada por Desafios"</h3>
                     <div class="case-skills-tag">Competências: Engenharia Pedagógica · Design de Ciclos Experienciais · Arquitetura Curricular</div>
+                </div>
+
+                <div class="guiding-proposal">
+                    <strong>Proposta Norteadora:</strong> A prática deveria anteceder a teoria, não apenas ilustrá-la.
                 </div>
 
                 <div class="process-grid-decision">
@@ -694,11 +670,16 @@
                 </div>
             </article>
 
+            <!-- PROJETO: MODERNIZAÇÃO DE SISTEMAS & INTEROPERABILIDADE NO AVA -->
             <article class="case-card">
                 <div class="case-header">
                     <span class="case-project-name">Projeto: Modernização de Sistemas & Interoperabilidade no AVA</span>
                     <h3 class="case-material-title">O Material Produzido: Dossiê Executivo de Viabilidade Técnica e Automação LTI</h3>
                     <div class="case-skills-tag">Competências: Diagnóstico de Gargalos · Governança de Sistemas · Viabilidade de Produto (PRD)</div>
+                </div>
+
+                <div class="guiding-proposal">
+                    <strong>Proposta Norteadora:</strong> Resolver dentro da infraestrutura já existente antes de propor investimento novo.
                 </div>
 
                 <div class="process-grid-decision">
@@ -722,11 +703,16 @@
                 </div>
             </article>
 
+            <!-- PROJETO: PROGRAMA DE PRODUÇÃO MULTIMODAL EM ESCALA -->
             <article class="case-card">
                 <div class="case-header">
                     <span class="case-project-name">Projeto: Programa de Produção Multimodal em Escala</span>
                     <h3 class="case-material-title">O Material Produzido: Matriz de Governança Pedagógica & Protocolos de Estúdio</h3>
                     <div class="case-skills-tag">Competências: Engenharia de Processos (DesignOps) · Governança Operacional · Métodos Ágeis</div>
+                </div>
+
+                <div class="guiding-proposal">
+                    <strong>Proposta Norteadora:</strong> Qualidade se garante na entrada do processo, não na correção da saída.
                 </div>
 
                 <div class="process-grid-decision">
@@ -746,15 +732,20 @@
                 </div>
                 
                 <div class="case-result">
-                    Validação Esperada: Sustentação de volumetrias de produção em larga escala, mitigação de refações e aceleração das entregas com padrão homogêneo de qualidade.
+                    Validação Esperada: Sustentação de volumetrias de produção em larga escala, mitigação de refações e aceleração das entregas com padrão homogêneo de qualidade.</
                 </div>
             </article>
 
+            <!-- PROJETO: CENTRO DE INTELIGÊNCIA DE PRODUTOS (CIP) -->
             <article class="case-card">
                 <div class="case-header">
                     <span class="case-project-name">Projeto: Centro de Inteligência de Produtos (CIP)</span>
                     <h3 class="case-material-title">O Material Produzido: Repositório de Suporte à Performance Comercial no AVA</h3>
                     <div class="case-skills-tag">Competências: Gestão do Conhecimento · Arquitetura de Informação · Design UX</div>
+                </div>
+
+                <div class="guiding-proposal">
+                    <strong>Proposta Norteadora:</strong> Organizar para quem busca sob pressão de tempo, não para quem arquiva com calma.
                 </div>
 
                 <div class="process-grid-decision">
@@ -774,15 +765,20 @@
                 </div>
                 
                 <div class="case-result">
-                    Validação Esperada: Acesso imediato a argumentos técnicos, redução de carga cognitiva da equipe e padronização do vocabulário instrucional.
+                    Validação Esperada: Acesso imediato a argumentos técnicos, redução de carga cognitiva da equipe e padronização do vocabulário instrucional.</
                 </div>
             </article>
 
+            <!-- PROJETO: EXECUTIVE LEADERSHIP PROGRAM (ELP) -->
             <article class="case-card">
                 <div class="case-header">
                     <span class="case-project-name">Projeto: Executive Leadership Program (ELP)</span>
                     <h3 class="case-material-title">O Material Produzido: Guia de Decisão Executiva & Trilha por Checkpoints</h3>
                     <div class="case-skills-tag">Competências: Arquitetura Instrucional · Reorganização Lógica no AVA · Roteirização Estratégica</div>
+                </div>
+
+                <div class="guiding-proposal">
+                    <strong>Proposta Norteadora:</strong> A trilha deveria seguir a lógica de decisão do executivo, não a lógica de gravação do estúdio.
                 </div>
 
                 <div class="process-grid-decision">
@@ -802,15 +798,20 @@
                 </div>
                 
                 <div class="case-result">
-                    Validação Demonstrada: Salvaguarda da margem orçamentária do projeto, cumprimento do cronograma e entrega de trilha executiva alinhada às premissas originais.
+                    Validação Esperada: Salvaguarda da margem orçamentária do projeto, cumprimento do cronograma e entrega de trilha executiva alinhada às premissas originais.</
                 </div>
             </article>
 
+            <!-- PROJETO: PÓS-GRADUAÇÃO EM ULTRASSONOGRAFIA CLÍNICA APLICADA -->
             <article class="case-card">
                 <div class="case-header">
                     <span class="case-project-name">Projeto: Pós-Graduação em Ultrassonografia Clínica Aplicada</span>
                     <h3 class="case-material-title">O Material Produzido: Matriz de Aprendizagem Híbrida</h3>
                     <div class="case-skills-tag">Competências: Andragogia Médica · Interação em Áudio · Modelagem de Avaliação Prévia</div>
+                </div>
+
+                <div class="guiding-proposal">
+                    <strong>Proposta Norteadora:</strong> Preservar o tempo presencial para o que só o presencial pode ensinar.
                 </div>
 
                 <div class="process-grid-decision">
@@ -830,15 +831,20 @@
                 </div>
                 
                 <div class="case-result">
-                    Validação Esperada: Maximização do tempo presencial de laboratório, foco no treino técnico de console e respeito à rotina do médico.
+                    Validação Esperada: Maximização do tempo presencial de laboratório, foco no treino técnico de console e respeito à rotina do médico.</
                 </div>
             </article>
 
+            <!-- PROJETO: SISTEMA DE RECONHECIMENTO CONTÍNUO -->
             <article class="case-card">
                 <div class="case-header">
                     <span class="case-project-name">Projeto: Sistema de Reconhecimento Contínuo</span>
                     <h3 class="case-material-title">O Material Produzido: Matriz Semântica de Badges Digitais Progressivas</h3>
                     <div class="case-skills-tag">Competências: Governança de Dados · Modelagem Semântica · Mapeamento de Competências</div>
+                </div>
+
+                <div class="guiding-proposal">
+                    <strong>Proposta Norteadora:</strong> Reconhecimento contínuo sustenta engajamento melhor que reconhecimento final.
                 </div>
 
                 <div class="process-grid-decision">
@@ -858,16 +864,17 @@
                 </div>
                 
                 <div class="case-result">
-                    Validação Esperada: Estímulo à continuidade formativa, visibilidade do progresso do estudante e portabilidade de competências no mercado.
+                    Validação Esperada: Estímulo à continuidade formativa, visibilidade do progresso do estudante e portabilidade de competências no mercado.</
                 </div>
             </article>
 
         </div>
     </section>
 
+    <!-- Corpus Crítico: Meu Posicionamento Público (Com Todos os Artigos e Redirecionamentos) -->
     <section class="editorial-section" id="editorial">
         <div class="container">
-            <div class="section-header" style="margin-bottom: 2rem;">
+            <div class="section-header" style="margin-bottom: 1.5rem;">
                 <span class="manifesto-tag">Meu Posicionamento Público</span>
                 <h2 class="section-heading">Textos e ensaios que publico no LinkedIn</h2>
                 <p class="section-lead">Escrevo com frequência sobre os bastidores da governança de dados, gestão do conhecimento e os erros comuns na criação de projetos educacionais. Fique à vontade para acompanhar e interagir com meus conteúdos.</p>
@@ -933,6 +940,7 @@
         </div>
     </section>
 
+    <!-- Footer: Contato e Diálogo Estratégico -->
     <footer id="contato">
         <div class="container footer-dialogue">
             <h2>Quer organizar a governança e o conhecimento da sua operação?</h2>
