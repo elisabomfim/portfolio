@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Governança de Dados, Gestão do Conhecimento & Arquitetura Instrucional</title>
-    
+
     <!-- Tipografia Sans-Serif Moderna e Limpa -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,14 +21,15 @@
             --espresso-soft: #382A21;
             --leather-amber: #C68642;
             --clay-highlight: #E8D9C8;
+            --warm-ochre-bg: #F4ECE1;
             --border-ink: rgba(31, 22, 16, 0.12);
             --border-strong: rgba(158, 71, 50, 0.28);
-            
+
             --gradient-menu-hover: linear-gradient(135deg, #9E4732 0%, #C68642 100%);
             --gradient-gold-line: linear-gradient(90deg, #9E4732 0%, #C68642 50%, #9E4732 100%);
-            
+
             --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            
+
             --shadow-paper: 0 4px 20px rgba(31, 22, 16, 0.05);
             --shadow-hover: 0 14px 35px rgba(158, 71, 50, 0.12);
             --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
@@ -309,6 +310,47 @@
             line-height: 1.9;
         }
 
+        /* Seção: Cadência de Produção & Capacidade Operacional */
+        .capacity-section {
+            padding: 5.5rem 0;
+            background-color: var(--warm-ochre-bg);
+            border-bottom: 1px solid var(--border-ink);
+            border-top: 1px solid var(--border-ink);
+            position: relative;
+        }
+
+        .capacity-box {
+            max-width: 960px;
+            margin: 0 auto;
+            background: var(--vintage-paper);
+            border: 1px solid rgba(198, 134, 66, 0.35);
+            border-left: 6px solid var(--leather-amber);
+            border-radius: 4px;
+            padding: 3rem;
+            box-shadow: var(--shadow-paper);
+        }
+
+        .capacity-box h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+            color: var(--espresso-dark);
+            margin-bottom: 1.4rem;
+        }
+
+        .capacity-box p {
+            font-size: 1.02rem;
+            color: var(--espresso-soft);
+            line-height: 1.85;
+            margin-bottom: 1.2rem;
+        }
+
+        .capacity-box p:last-child {
+            margin-bottom: 0;
+            font-weight: 600;
+            color: var(--terracotta-raw);
+        }
+
         /* Seção: Casos Reais */
         .cases-section { padding: 6rem 0; border-bottom: 1px solid var(--border-ink); }
         .section-header { margin-bottom: 3.5rem; }
@@ -416,7 +458,7 @@
             border-left: 4px solid var(--terracotta-raw);
             border-radius: 4px;
         }
-        
+
         .artifact-box h4 {
             font-size: 1.05rem;
             font-weight: 700;
@@ -442,7 +484,7 @@
 
         /* Editorial Section (Carrossel Horizontal de Ensaios) */
         .editorial-section { padding: 5.5rem 0; background: var(--vintage-linen); border-bottom: 1px solid var(--border-ink); }
-        
+
         .carousel-track {
             display: flex;
             gap: 1.5rem;
@@ -485,7 +527,7 @@
         .footer-dialogue { max-width: 820px; margin: 0 auto; }
         .footer-dialogue h2 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 1.2rem; color: var(--vintage-cream); }
         .footer-dialogue p { font-size: 1.05rem; color: var(--vintage-linen); margin-bottom: 2.5rem; line-height: 1.8; }
-        
+
         .cta-group { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
         .cta-btn { padding: 0.95rem 1.8rem; font-size: 0.9rem; font-weight: 700; text-decoration: none; border-radius: 4px; transition: var(--transition); }
         .cta-primary { background: var(--terracotta-raw); color: white; }
@@ -519,7 +561,8 @@
             .prose-block, .process-grid-decision, .competencies-grid { grid-template-columns: 1fr; gap: 2rem; }
             .hero h1 { font-size: 2.1rem; }
             .case-card { padding: 2rem 1.5rem; }
-            
+            .capacity-box { padding: 2rem 1.5rem; }
+
             .header-inner { justify-content: flex-start; overflow-x: auto; padding: 0 1rem; }
             .header-inner::-webkit-scrollbar { display: none; }
             .nav-links { padding: 0.2rem 0.35rem; }
@@ -534,6 +577,7 @@
             <ul class="nav-links">
                 <li><a href="#competencias">Eixos Estratégicos</a></li>
                 <li><a href="#arquitetura">Arquitetura</a></li>
+                <li><a href="#capacidade">Capacidade</a></li>
                 <li><a href="#cases">Projetos Reais</a></li>
                 <li><a href="#editorial">Posicionamento</a></li>
                 <li><a href="#contato">Contato</a></li>
@@ -544,7 +588,7 @@
     <!-- Hero Narrativo & Posicionamento Direto -->
     <section class="container hero">
         <h1>Estruturo ecossistemas onde o conhecimento <em>sustenta decisões de negócio</em></h1>
-        
+
         <div class="prose-block">
             <div class="prose-column">
                 <div class="prose-text">
@@ -559,7 +603,7 @@
                     <p>Mantenho um olhar contínuo para inovações e automações. No nível estratégico, emprego IA para acelerar diagnósticos analíticos, mapear padrões de competências em grandes volumes de dados e estruturar a base de ecossistemas instrucionais complexos. A IA atua na aceleração do processamento; a governança, a tomada de decisão semântica, o alinhamento institucional e o controle de qualidade final permanecem sob minha curadoria técnica e rigorosa.</p>
                 </div>
             </div>
-            
+
             <!-- Bloco Lateral: Alinhamento Executivo -->
             <div class="manifesto-container" id="manifesto">
                 <div class="manifesto-box">
@@ -596,7 +640,7 @@
                 <!-- 3. Arquitetura de Sistemas Instrucionais e Experiência do Usuário -->
                 <div class="competency-card">
                     <h3>Arquitetura de Sistemas Instrucionais e Experiência do Usuário</h3>
-                    <p>Desenho de percursos híbridos complexos e trilhas de aprendizagem executiva orientadas a tomadas de decisão. Desenvolvimento de ecossistemas focados na mitigação da carga cognitiva de aprendizes adultos por meio de princípios de arquitetura de navegação limpa e design centrado na usabilidade. Substituição de avaliações puramente memorísticas por frameworks de avaliação autêntica baseada em evidências, cenários progressivos e laudos auditáveis de proficiência técnica.</p>
+                    <p>Desenho de percursos híbridos complexos e trilhas de aprendizagem executiva orientadas a tomadas de decisão. Desenvolvimento de ecossistemas focados na mitigação da carga cognitiva de aprendizes adultos por meio de princípios de arquitetura de navegação limpa e design centrado na usabilidade. Substituição de avaliações puramente genéricas por frameworks de avaliação autêntica baseada em evidências, cenários progressivos e laudos auditáveis de proficiência técnica.</p>
                 </div>
 
                 <!-- 4. EdTech Ops e Inovação Tecnológica Aplicada -->
@@ -634,6 +678,19 @@
         </div>
     </section>
 
+    <!-- Seção: Cadência de Produção & Capacidade Operacional -->
+    <section class="capacity-section" id="capacidade">
+        <div class="container">
+            <div class="capacity-box">
+                <span class="manifesto-tag">Escala & Sustentação</span>
+                <h2>Cadência de Produção & Capacidade Operacional</h2>
+                <p>Ao longo de oito meses de atuação contínua, sustentei uma esteira de mais de 400 entregas de materiais didáticos, absorvendo variações de demanda que oscilaram entre dezenas e mais de cem produções por mês. Essa cadência foi mantida sem ruptura de padrão de qualidade nos picos de maior volume nem represamento de fila nos períodos de menor demanda — a mesma disciplina de gestão de capacidade sob carga variável exigida em qualquer operação de produto em escala.</p>
+                <p>Em paralelo ao volume, conduzi dezesseis iniciativas estratégicas de maior complexidade — entre elas, a reestruturação de um catálogo de 337 disciplinas em uma arquitetura de quatro níveis (Categoria → Núcleos → Eixos → Disciplinas), transformando um inventário disperso em um modelo de portfólio pronto para resposta comercial ágil.</p>
+                <p>Os casos a seguir destrincham as decisões estruturais por trás de parte dessas entregas.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Casos Reais: Projetos reais e problemas que solucionei -->
     <section class="cases-section" id="cases">
         <div class="container">
@@ -652,7 +709,7 @@
                 </div>
 
                 <div class="guiding-proposal">
-                    <strong>Proposta Norteadora:</strong> A prática deveria anteceder a teoria, não apenas ilustrá-la.
+                    <strong>Competência Central Aplicada:</strong> Redesenho de sequência pedagógica em ciclos experienciais.
                 </div>
 
                 <div class="process-grid-decision">
@@ -670,7 +727,7 @@
                     <h4>Entrega Chave</h4>
                     <p>Guia metodológico completo integrando trilhas flexíveis (Laboratório de Tendências Profissionais para Graduação e Workshops de Práticas para Pós-Graduação) em simbiose com Livros Digitais Interativos e Aulas Práticas.</p>
                 </div>
-                
+
                 <div class="case-result">
                     Validação Demonstrada: Aprovação e validação executiva direta pela alta liderança institucional (CEO), consolidando a metodologia como diretriz oficial de produção do departamento.
                 </div>
@@ -685,7 +742,7 @@
                 </div>
 
                 <div class="guiding-proposal">
-                    <strong>Proposta Norteadora:</strong> Resolver dentro da infraestrutura já existente antes de propor investimento novo.
+                    <strong>Competência Central Aplicada:</strong> Análise de viabilidade técnica sob restrição orçamentária.
                 </div>
 
                 <div class="process-grid-decision">
@@ -703,7 +760,7 @@
                     <h4>Entrega Chave</h4>
                     <p>Dossiê executivo completo contendo análise de viabilidade técnica, arquitetura de conformidade com LGPD, plano de ativação em ambiente de testes e roteiro de implementação.</p>
                 </div>
-                
+
                 <div class="case-result">
                     Validação Demonstrada: Reconhecimento executivo da Diretoria quanto à viabilidade e ausência de custos, estabelecendo a base para modernização dos fluxos operacionais de dados.
                 </div>
@@ -718,7 +775,7 @@
                 </div>
 
                 <div class="guiding-proposal">
-                    <strong>Proposta Norteadora:</strong> Qualidade se garante na entrada do processo, não na correção da saída.
+                    <strong>Competência Central Aplicada:</strong> Desenho de travas de controle de qualidade pré-produção.
                 </div>
 
                 <div class="process-grid-decision">
@@ -736,9 +793,9 @@
                     <h4>Entrega Chave</h4>
                     <p>Framework operacional de produção com matrizes de responsabilidade técnica e esteira de controle de qualidade que normatizou o fluxo de captação e edição.</p>
                 </div>
-                
+
                 <div class="case-result">
-                    Validação Esperada: Sustentação de volumetrias de produção em larga escala, mitigação de refações e aceleração das entregas com padrão homogêneo de qualidade.</
+                    Validação Esperada: Sustentação de volumetrias de produção em larga escala, mitigação de refações e aceleração das entregas com padrão homogêneo de qualidade.</p>
                 </div>
             </article>
 
@@ -751,7 +808,7 @@
                 </div>
 
                 <div class="guiding-proposal">
-                    <strong>Proposta Norteadora:</strong> Organizar para quem busca sob pressão de tempo, não para quem arquiva com calma.
+                    <strong>Competência Central Aplicada:</strong> Modelagem taxonômica para recuperação rápida de informação.
                 </div>
 
                 <div class="process-grid-decision">
@@ -769,9 +826,9 @@
                     <h4>Entrega Chave</h4>
                     <p>Ambiente estruturado no AVA com taxonomia clara, guias de consulta rápida e adequação de linguagem para contexto instrucional e descritores funcionais.</p>
                 </div>
-                
+
                 <div class="case-result">
-                    Validação Esperada: Acesso imediato a argumentos técnicos, redução de carga cognitiva da equipe e padronização do vocabulário instrucional.</
+                    Validação Esperada: Acesso imediato a argumentos técnicos, redução de carga cognitiva da equipe e padronização do vocabulário instrucional.
                 </div>
             </article>
 
@@ -784,7 +841,7 @@
                 </div>
 
                 <div class="guiding-proposal">
-                    <strong>Proposta Norteadora:</strong> A trilha deveria seguir a lógica de decisão do executivo, não a lógica de gravação do estúdio.
+                    <strong>Competência Central Aplicada:</strong> Reestruturação de trilha por checkpoints de decisão.
                 </div>
 
                 <div class="process-grid-decision">
@@ -802,9 +859,9 @@
                     <h4>Entrega Chave</h4>
                     <p>Pacote instrucional reformulado em diálogo com as diretrizes do curso e soluções de aulas roteirizadas para produção sintética com IA.</p>
                 </div>
-                
+
                 <div class="case-result">
-                    Validação Esperada: Salvaguarda da margem orçamentária do projeto, cumprimento do cronograma e entrega de trilha executiva alinhada às premissas originais.</
+                    Validação Esperada: Salvaguarda da margem orçamentária do projeto, cumprimento do cronograma e entrega de trilha executiva alinhada às premissas originais.
                 </div>
             </article>
 
@@ -817,7 +874,7 @@
                 </div>
 
                 <div class="guiding-proposal">
-                    <strong>Proposta Norteadora:</strong> Preservar o tempo presencial para o que só o presencial pode ensinar.
+                    <strong>Competência Central Aplicada:</strong> Redistribuição de carga cognitiva entre modalidades síncrona e assíncrona.
                 </div>
 
                 <div class="process-grid-decision">
@@ -835,9 +892,9 @@
                     <h4>Entrega Chave</h4>
                     <p>Matriz de aprendizagem e sistema avaliativo humanizado que considera a bagagem dos profissionais, integrando diagnóstico prévio e validação somativa por laudos.</p>
                 </div>
-                
+
                 <div class="case-result">
-                    Validação Esperada: Maximização do tempo presencial de laboratório, foco no treino técnico de console e respeito à rotina do médico.</
+                    Validação Esperada: Maximização do tempo presencial de laboratório, foco no treino técnico de console e respeito à rotina do médico.
                 </div>
             </article>
 
@@ -850,7 +907,7 @@
                 </div>
 
                 <div class="guiding-proposal">
-                    <strong>Proposta Norteadora:</strong> Reconhecimento contínuo sustenta engajamento melhor que reconhecimento final.
+                    <strong>Competência Central Aplicada:</strong> Modelagem de matriz de maturidade profissional.
                 </div>
 
                 <div class="process-grid-decision">
@@ -868,16 +925,16 @@
                     <h4>Entrega Chave</h4>
                     <p>Arquitetura de microcredenciais modular com regras padronizadas para emissão contínua de insígnias digitais e comprovação transparente de habilidades.</p>
                 </div>
-                
+
                 <div class="case-result">
-                    Validação Esperada: Estímulo à continuidade formativa, visibilidade do progresso do estudante e portabilidade de competências no mercado.</
+                    Validação Esperada: Estímulo à continuidade formativa, visibilidade do progresso do estudante e portabilidade de competências no mercado.
                 </div>
             </article>
 
         </div>
     </section>
 
-    <!-- Corpus Crítico: Meu Posicionamento Público (Com Todos os Artigos e Redirecionamentos) -->
+    <!-- Corpus Crítico: Meu Posicionamento Público -->
     <section class="editorial-section" id="editorial">
         <div class="container">
             <div class="section-header" style="margin-bottom: 1.5rem;">
@@ -887,7 +944,7 @@
             </div>
 
             <div class="carousel-track">
-                
+
                 <article class="essay-card">
                     <div>
                         <span class="essay-badge">Governança de Dados</span>
@@ -953,7 +1010,7 @@
             <p>
                 Se você precisa de uma profissional para estruturar processos instrucionais em escala, colocar ordem nos repositórios da sua equipe ou desenhar sistemas instrucionais funcionais, fale comigo.
             </p>
-            
+
             <div class="cta-group">
                 <a href="mailto:ebomfim.lab@gmail.com" class="cta-btn cta-primary">✉️ Enviar um e-mail estratégico</a>
                 <a href="https://www.linkedin.com/in/elisabomfim/" target="_blank" class="cta-btn cta-secondary">🔗 Conectar no LinkedIn</a>
